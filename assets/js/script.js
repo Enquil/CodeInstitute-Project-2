@@ -39,8 +39,17 @@ function checkAnswer() {
 
 }
 
+/**
+ * gets numbers and calculates them based on what gametype is selected diectly from DOM
+ */
 function calculateCorrectAnswer() {
-    let correctAnswer = (num1+num2);
+    let operand1 = parseInt(document.getElementById("operand1").innerText);
+    let operand2 = parseInt(document.getElementById("operand2").innerText);
+    let operator = document.getElementById("operator").innerText;
+
+    if (operator === "+") {
+        return [operand1 + operand2, "addition"]
+    }
 }
 
 function incrementScore() {

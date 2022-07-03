@@ -69,7 +69,7 @@ function calculateCorrectAnswer() {
     } else if (operator === "*") {
         return [operand1 * operand2, "multiply"]
     } else if (operator === "/") {
-        rturn [operand1 / operand2, "divide"]
+        return [operand1 / operand2, "divide"]
     }
 }
  

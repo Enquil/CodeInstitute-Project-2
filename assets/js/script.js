@@ -44,6 +44,14 @@ function runGame(gameType) {
 function checkAnswer() {
 
     let userAnswer = parseInt(document.getElementById("answer-box").value);
+    let calculatedAnswer = calculateCorrectAnswer();
+    let isCorrect = userAnswer === calculatedAnswer[0];
+
+    if (isCorrect) {
+        alert("Congrats fucker");
+    } else {
+        alert("nope")
+    }
 }
 
 /**
@@ -66,7 +74,6 @@ function calculateCorrectAnswer() {
 }
  
 function incrementScore() {
-
 }
 
 function incrementWrongAnswer() {

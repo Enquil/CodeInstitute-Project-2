@@ -50,7 +50,7 @@ function checkAnswer() {
     if (isCorrect) {
         alert("Congrats fucker");
     } else {
-        alert("nope")
+        alert(`Nope, ${userAnswer} is not ${calculatedAnswer}`);
     }
 }
 

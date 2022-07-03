@@ -52,6 +52,8 @@ function checkAnswer() {
     } else {
         alert(`Nope, ${userAnswer} is not ${calculatedAnswer}`);
     }
+
+    runGame(calculatedAnswer[1])
 }
 
 /**

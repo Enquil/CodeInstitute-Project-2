@@ -53,7 +53,7 @@ function checkAnswer() {
         alert(`Nope, ${userAnswer} is not ${calculatedAnswer}`);
     }
 
-    runGame(calculatedAnswer[1])
+    runGame(calculatedAnswer[1]);
 }
 
 /**

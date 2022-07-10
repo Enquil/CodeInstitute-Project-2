@@ -22,7 +22,7 @@ html, body {
 }
 
 /* give space for login form*/
-.login input, .login button {
+#login input, #login button, #login link {
     margin: 10px 20px;
 }
 

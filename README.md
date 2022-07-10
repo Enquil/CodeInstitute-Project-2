@@ -29,4 +29,6 @@ This is a quiz game
 ---
 
 * Index
-  * hello
+  * Basic welcome page
+  * Login form with "forgot password" password function
+  * Link to creating a user 

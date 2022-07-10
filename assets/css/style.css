@@ -18,3 +18,7 @@ html, body {
     display: block;
 }
 
+.login > input, link {
+    margin: 10px 20px;
+}
+

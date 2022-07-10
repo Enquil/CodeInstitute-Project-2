@@ -8,7 +8,7 @@ html, body {
 }
 
 /*Set fontsize of input*/
-#psw, #uname {
+#psw, #uname, #login a, #login p {
     font-size: 1.5rem;
 }
 

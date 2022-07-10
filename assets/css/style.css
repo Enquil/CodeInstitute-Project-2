@@ -1,8 +1,9 @@
-
+/*set margin of html*/
 html, body {
     margin: 0;
 }
 
+/*used on labels*/
 .block {
     display: block;
 }

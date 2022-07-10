@@ -8,6 +8,11 @@ html, body {
     color: rgb(0,139,139);
 }
 
+/*Set fontsize of input*/
+#psw, #uname {
+    font-size: 30px;
+}
+
 /*used on labels*/
 .block {
     display: block;

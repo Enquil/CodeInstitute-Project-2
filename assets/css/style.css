@@ -3,12 +3,6 @@ html, body {
     margin: 0;
 }
 
-/*Size login window and centering*/
-#login {
-    height: auto;
-    width: 20%;
-}
-
 
 /*Spacing bottom*/
 form {
@@ -65,3 +59,19 @@ a {
     border: 1px solid black;
     margin: 10px 9%;
 }
+
+
+/*Size login window and centering*/
+#login {
+    height: auto;
+    min-width: 20%;
+    margin: 10% 40%;
+}
+
+
+/*Resize login for mobile device*/
+@media screen and (max-width: 1000px) {
+    #login {
+      width: 100%;
+    }
+  }

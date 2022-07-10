@@ -23,3 +23,10 @@ This is a quiz game
 * JavaScript
 
 * More platforms might be incorporated in order to create a fully functioning user database instead of a mock-up using only JSON. 
+
+
+## Pages and Features
+---
+
+* Index
+  * hello

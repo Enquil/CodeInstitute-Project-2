@@ -3,6 +3,18 @@ html, body {
     margin: 0;
 }
 
+/*Size login window and centering*/
+#login {
+    height: auto;
+    width: 20%;
+}
+
+
+/*Spacing bottom*/
+form {
+    padding-bottom: 20px;
+}
+
 
 /* Remove text-decoration from links */
 a {
@@ -11,8 +23,14 @@ a {
 
 
 /* Set fontsize of input */
-#psw, #uname, #login a, #login button {
+#pwd, #uname, #login a, #login button {
     font-size: 1.5rem;
+}
+
+
+/*Make "forgot password" smaller*/
+#forgot-pwd a {
+    font-size: 1rem;
 }
 
 
@@ -39,8 +57,11 @@ a {
     margin: 10px 20px;
 }
 
-
-/*Size login window*/
-#login {
-    width: 20%;
+/*Border and space for login form content*/
+.eighty-width {
+    width: 80%;
+    position: relative;
+    right: 0;
+    border: 1px solid black;
+    margin: 10px 9%;
 }

@@ -18,9 +18,10 @@ This is a quiz game
 ## Technologies used
 ---
 
-* CSS
-* HTML
-* JavaScript
+* Languages
+  * CSS
+  * HTML
+  * JavaScript
 
 * More platforms might be incorporated in order to create a fully functioning user database instead of a mock-up using only JSON. 
 

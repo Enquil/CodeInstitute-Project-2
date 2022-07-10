@@ -10,7 +10,7 @@
 
 <body>
 
-
+<div>
     <!--login form-->
     <div id="login">
         <form class="big-shadow" action="action_page.php" method="post">
@@ -19,20 +19,29 @@
                     <input id="uname" name="uname" type="text" placeholder="Enter Username">
                 </div>
                 <div>
-                    <input id="psw" name="psw" type="text" placeholder="Enter Password">
+                    <input id="pwd" name="pwd" type="text" placeholder="Enter Password">
                 </div>
             </div>            
 
-            <!--login button-->
-            <button onclick="submit">Login</button> <a href=""></a>
+            <!--login button, forgot password-->
+            <div class="text-center">
+                <button onclick="submit">Login</button>
+            </div>
+
+            <!--forgot password-->
+            <div id="forgot-pwd" class="text-center">
+                <a role="button" href="">Forgot Password?</a>
+            </div>
+
+            <div class="eighty-width"></div>
+
+            <!--new user-->
+            <div class="text-center">
+                <a href="create-user.html">Sign up for free</a>
+            </div>
         </form>
-
-        <!--new user-->
-        <div class="text-center">
-            <a href="create-user.html">Sign up for free</a>
-        </div>
     </div>
-
+</div>
 
     <!--SCRIPT-->
 <script src="assets/js/script.js"></script>

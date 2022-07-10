@@ -18,7 +18,8 @@ html, body {
     display: block;
 }
 
-.login > input, link {
+/* give space for login form*/
+.login > input, .login > button {
     margin: 10px 20px;
 }
 

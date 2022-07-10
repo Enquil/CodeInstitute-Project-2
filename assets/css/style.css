@@ -21,17 +21,26 @@ a {
     display: block;
 }
 
+
 /* Text-centering class */
 .text-center {
     text-align: center;
 }
 
+
+/*Big shadow for windows highlighting*/
 .big-shadow {
     box-shadow: 0px 0px 10px black;
 }
 
+
 /* Give space for login form */
-#login input, #login button, #login a {
+#login input, #login button, #login a, form {
     margin: 10px 20px;
 }
 
+
+/*Size login window*/
+#login {
+    width: 20%;
+}

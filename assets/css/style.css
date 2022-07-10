@@ -10,7 +10,7 @@ html, body {
 
 /*Set fontsize of input*/
 #psw, #uname {
-    font-size: 30px;
+    font-size: 1.5rem;
 }
 
 /*used on labels*/

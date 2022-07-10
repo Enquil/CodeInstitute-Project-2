@@ -1,27 +1,36 @@
-/*set margin of html*/
+/* Set margin of html */
 html, body {
     margin: 0;
 }
 
-#new-user {
+
+/* Remove text-decoration from links */
+a {
     text-decoration: none;
 }
 
-/*Set fontsize of input*/
+
+/* Set fontsize of input */
 #psw, #uname, #login a, #login button {
     font-size: 1.5rem;
 }
 
-/*used on labels*/
+
+/* Used on labels */
 .block {
     display: block;
 }
 
+/* Text-centering class */
 .text-center {
     text-align: center;
 }
 
-/* give space for login form*/
+.big-shadow {
+    box-shadow: 0px 10px black;
+}
+
+/* Give space for login form */
 #login input, #login button, #login a {
     margin: 10px 20px;
 }

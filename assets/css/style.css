@@ -11,15 +11,18 @@ body, html {
     width: 80vw;
     height: 80vh;
     border: 1px solid black;
+    position: relative;
+    margin: 5% 10%;
 }
 
 
 /* viewing-window */
 
-#viewing-window {
-    width: 90%;
-    height: 60%;
+#hero-img {
+    height: 40%;
+    width: 20%;
     border: 1px solid black;
+    position: relative;
 }
 
 
@@ -29,4 +32,16 @@ body, html {
 
 .inline.block {
     display: inline-block;
+}
+
+
+/* Split selector and children */
+
+#selector {
+    height: auto;
+    display: block;
+}
+
+.fortyfive {
+    width: 45%;
 }

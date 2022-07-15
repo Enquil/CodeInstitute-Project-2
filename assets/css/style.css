@@ -5,12 +5,30 @@ body, html {
 }
 
 
-/* main-window */
+    /* Main-window */
 
-#main-window {
+#main {
     width: 80vw;
-    height: 70vh;
+    height: 80vh;
     border: 1px solid black;
-    margin: 5% 10%;
+    margin: 2% 10%;
+}
+
+
+    /* View Content and menus */
+
+.view-window {
+    width: 25%;
+    height: 25%;
+    color: lightblue;
+}
+
+
+    /*Block*/
+
+.block {
     display: block;
 }
+
+    /* Questions and nav */
+

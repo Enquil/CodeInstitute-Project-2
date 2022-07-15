@@ -1,8 +1,12 @@
+body, html {
+    margin: 0;
+}
+
 /* game-window */
 
 #game-window {
-    min-width: 78%;
-    max-width: 80%;
+    width: 80%;
+    height: 80px;
     border: 1px solid black;
-    margin: 10%
+    margin: 10%;
 }

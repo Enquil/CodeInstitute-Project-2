@@ -1,12 +1,16 @@
+/*set body and html margin to 0*/
+
 body, html {
     margin: 0;
 }
 
-/* game-window */
 
-#game-window {
-    width: 80%;
-    height: 8rem;
+/* main-window */
+
+#main-window {
+    width: 80vw;
+    height: 70vh;
     border: 1px solid black;
-    margin: 10%;
+    margin: 5% 10%;
+    display: block;
 }

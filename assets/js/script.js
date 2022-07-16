@@ -1,19 +1,30 @@
 let buttons = document.getElementsByTagName("button");
 
+let loggedIn = false;
+
 document.addEventListener("DOMContentLoaded", function() {
-    let loggedIn = false;
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "newgame") {
                 newGame();
-            } else if (this.getAttribute("data-type") === "history") {
-                historyGame();
+            } else if (this.getAttribute("data-type") === "login") {
+                logIn();
+            } else if (this.getAttribute("data-type") === "contact") {
+                contact();
             }
+
         });
     }
 });
 
+
+//Function for making a newGame
 function newGame() {
-    alert("Hello from the function!");
-    console.log(loggedIn);
+    alert("moe");
+    document.getElementById("main-window").style.visibility = "none";
+    document.getElementById("game-category").style.visibility = "block";
+}
+
+function LogIn() {
+    alert("hello;");
 }

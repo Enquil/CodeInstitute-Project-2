@@ -28,7 +28,7 @@ function newGame() {
 }
 
 //Login modal window
-function LogIn() {
+function logIn() {
     alert("hello");
 }
 

@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function newGame() {
     alert("moe");
     document.getElementById("main-window").remove = "none";
-    document.getElementById("game-category").style.visibility = "block";
+    document.getElementById("game-category").add.class = "block";
 }
 
 //Login modal window

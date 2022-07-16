@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
 //Function for making a newGame
 function newGame() {
     alert("moe");
-    document.getElementById("main-window").style.visibility = "none";
+    document.getElementById("main-window").change.class = "none";
     document.getElementById("game-category").style.visibility = "block";
 }
 
 function LogIn() {
-    alert("hello;");
+    alert("hello");
 }

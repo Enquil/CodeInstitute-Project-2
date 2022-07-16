@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute("data-type") === "newgame") {
                 newGame();
             } else if (this.getAttribute("data-type") === "history") {
-                ;
+                historyGame();
             }
         });
     }

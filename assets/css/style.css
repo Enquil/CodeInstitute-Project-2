@@ -1,26 +1,61 @@
-/* positioning */
-
-.relative {
-    position: relative;
-}
-
-.absolute {
-    position: absolute;
-}
-
-
 /* Set body and html margin to 0 */
 
 body, html {
     margin: 0;
 }
 
+
+/* display styling */
+
 .block {
     display: block;
 }
 
-.eigthy {
-    height: 80vh;
-    width: 80vh;
-    border: 5px solid black;
+.none {
+    display: none;
+}
+
+
+/* positioning */
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* styles main window when not logged in*/
+
+#menu {
+    min-height: 73vh;
+    width: auto;
+    border-top: 5px ridge lightblue;
+    border-bottom: 5px ridge lightblue;
+    box-shadow: 0px 5px 10px black;
+    margin: 5% 35%;
+}
+
+
+/* menu buttons when not logged in */
+
+.fifty {
+    width: 50%;
+    margin: 5% 25%;
+}
+
+nav {
+    height: 4vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.text-center {
+    text-align: center;
 }

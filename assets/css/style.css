@@ -1,51 +1,26 @@
+/* positioning */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+
 /* Set body and html margin to 0 */
 
 body, html {
     margin: 0;
 }
 
-
-/* main-window */
-
-#main-window {
-    width: 100vw;
-    height: 100vh;
-    border: 1px solid black;
-    position: fixed;
-    text-align: center;
-}
-
-
-/* viewing-window*/
-
-#hero-img, #newgame-selector {
-    height: 8em;
-    width: 8em;
-    border: 1px solid black;
-    position: relative;
-}
-
-/* Visibilities */
 .block {
     display: block;
 }
 
-.inline.block {
-    display: inline-block;
-}
-
-.none {
-    display: none;
-}
-
-
-/* Split selector and children */
-
-#selector {
-    height: auto;
-    display: block;
-}
-
-.fortyfive {
-    width: 45%;
+.eigthy {
+    height: 80vh;
+    width: 80vh;
+    border: 5px solid black;
 }

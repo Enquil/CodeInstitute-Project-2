@@ -1,17 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+let buttons = document.getElementsByTagName("button");
 
+document.addEventListener("DOMContentLoaded", function() {
+    let menuOn = true;
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "history") {
-                alert("Hello! I am an alert box!!");
-            } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
+            if (this.getAttribute("data-type") === "newgame") {
+                newGame();
+            } else if (this.getAttribute("data-type") === "history") {
+                ;
             }
         });
     }
-
-    runGame("addition");
-
 });
+
+function newGame() {
+    alert("Hello from the function!");
+}

@@ -11,15 +11,16 @@ body, html {
     width: 100vw;
     height: 100vh;
     border: 1px solid black;
-    position: relative;
+    position: fixed;
+    text-align: center;
 }
 
 
 /* viewing-window */
 
 #hero-img {
-    height: 40%;
-    width: 40%;
+    height: 8em;
+    width: 8em;
     border: 1px solid black;
     position: relative;
 }

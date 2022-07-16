@@ -32,6 +32,6 @@ function logIn() {
 }
 
 function contactMe() {
-    alert("hellofrom contact")
+    alert("hellofrom contact");
 }
 

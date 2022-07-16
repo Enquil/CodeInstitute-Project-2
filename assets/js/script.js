@@ -1,7 +1,7 @@
 let buttons = document.getElementsByTagName("button");
 
 document.addEventListener("DOMContentLoaded", function() {
-    let menuOn = true;
+    let loggedIn = false;
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "newgame") {
@@ -15,4 +15,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function newGame() {
     alert("Hello from the function!");
+    console.log(loggedIn);
 }

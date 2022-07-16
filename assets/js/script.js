@@ -2,6 +2,8 @@ let buttons = document.getElementsByTagName("button");
 
 let loggedIn = false;
 
+
+//control panel
 document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "login") {
                 logIn();
             } else if (this.getAttribute("data-type") === "contact") {
-                contact();
+                contactMe();
             }
 
         });
@@ -21,10 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
 //Function for making a newGame
 function newGame() {
     alert("moe");
-    document.getElementById("main-window").change.class = "none";
+    document.getElementById("main-window").remove = "none";
     document.getElementById("game-category").style.visibility = "block";
 }
 
+//Login modal window
 function LogIn() {
     alert("hello");
 }
+

@@ -16,9 +16,9 @@ body, html {
 }
 
 
-/* viewing-window */
+/* viewing-window*/
 
-#hero-img {
+#hero-img, #newgame-selector {
     height: 8em;
     width: 8em;
     border: 1px solid black;

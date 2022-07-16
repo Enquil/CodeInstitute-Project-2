@@ -2,8 +2,6 @@ let buttons = document.getElementsByTagName("button");
 
 let loggedIn = false;
 
-while (loggedIn === false);
-
 //control panel
 document.addEventListener("click", function() {
     for (let button of buttons) {
@@ -23,7 +21,7 @@ document.addEventListener("click", function() {
 
 //Function for making a newGame
 function newGame() {
-    alert("newgamehello");
+    document.getElementById("menu");
 }
 
 //Login modal window

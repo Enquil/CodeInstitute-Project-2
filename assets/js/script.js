@@ -2,6 +2,7 @@ let buttons = document.getElementsByTagName("button");
 
 let loggedIn = false;
 
+while (loggedIn === false);
 
 //control panel
 document.addEventListener("click", function() {
@@ -22,11 +23,15 @@ document.addEventListener("click", function() {
 
 //Function for making a newGame
 function newGame() {
-    alert("moe");
+    alert("newgamehello");
 }
 
 //Login modal window
 function logIn() {
-    alert("hello");
+    alert("helloformlogin");
+}
+
+function contactMe() {
+    alert("hellofrom contact")
 }
 

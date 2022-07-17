@@ -1,67 +1,51 @@
-/* Set body and html margin to 0 */
+/*body and html margin 0*/
 
 body, html {
     margin: 0;
 }
 
-a, button {
-    border: none;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    background-color: gainsboro;
+
+/*set main and game window*/
+
+#game-window {
+    height: 90vh;
+    width: 90vw;
 }
-/* display styling */
+
+
+#menu-window {
+    height: 80vh;
+    width: 80vw;
+    background-color: lightblue;
+    margin: 4% 11%;
+}
+
+
+/* Display options*/
 
 .block {
     display: block;
+    text-align: center;
+}
+
+.inline-block {
+    display: inline-block;
 }
 
 .none {
     display: none;
 }
 
-
-/* positioning */
-
-.absolute {
-    position: absolute;
-}
-
-.relative {
-    position: relative;
-}
-
 .text-center {
     text-align: center;
 }
 
-
-/* styles main window when not logged in*/
-
-#menu {
-    min-height: 73vh;
-    width: auto;
-    border-top: 5px ridge lightblue;
-    border-bottom: 5px ridge lightblue;
-    box-shadow: 0px 5px 10px black;
-    margin: 5% 35%;
+.fortyfive {
+    width: 45%;
+    margin-top: 2%;
 }
 
-
-/* menu buttons when not logged in */
-
-.fifty {
-    width: 50%;
-    margin: 5% 25%;
-}
-
-nav {
-    height: 4vh;
-    width: 100vw;
-    background-color: black;
-}
-
-.text-center {
-    text-align: center;
+.tworemfont {
+    font-size: 2rem;
+    text-decoration: none;
 }

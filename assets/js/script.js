@@ -8,35 +8,45 @@ for (let button of buttons) {
     });
 }
 
-function categorySelect(category) {
-    
+function newGame(category) {
+    x = 0;
     if (category === "culture") {
-        newGame(culture);
+        const results = questionList.filter(obj => {
+            return obj.categories === culture;
+          });
+          console.log(results);
     } else if (category === "history") {
-        newGame(history);
+        const results = questionList.filter(obj => {
+            return obj.categories === history;
+          });
+          console.log(results);
     } else if (category === "science") {
-        newGame(science);
+        const results = questionList.filter(obj => {
+            return obj.categories === science;
+          });
+          console.log(results);
     } else if (category === "sports") {
-        newGame(sports);
+        const results = questionList.filter(obj => {
+            return obj.categories === sports;
+          });
+          console.log(results);
     } else
     alert(`Unknown game type: ${category}`);
 }
 
 
-const questions = [
-    {id: 1, categories: ["culture", "history"], answer: "Foo Fighters", wrong: ["Nirvana", "Thirty Seconds to Mars", "Metallica", "Meow"], question: "Dave Grohl founded what band?", difficulty: 1},
+const questionList = [
 
-    {id: 2, categories: ["sports", "history"], answer: "Lionel Messi", wrong: ["Christiano Ronaldo", "Luka Modric", "Michel Platini", "Tyson Fury"], question: "Who has won the most ballon d'or", difficulty: 1},
+    {id: 1, question: "Who has won ballon d'or the most times?", answer: "Lionel Messi", wrong_answer: ["Christiano Ronaldo", "Michel Platini", "Luka Modric", "Will Ferrell"],
+    categories: sports,
+},
 
-    {id: 3, categories: ["history", "science"], answer: "1998", wrong: ["1989", "1994", "2012", "2001"], question: "When was the ISS launched?", difficulty: 2},
+    {id: 2, question: "Worldwide, how many viewers tuned in for the 1996 Atlanta opening ceremony?", answer: "3.4 Billion", wrong_answer: ["3.2 Billion", "2.3 Billion", "4.1 Billion", "Will Ferrell"],
+    categories: sports
+},
 
-    {id: 4, categories: ["science", "history"], answer: "Eratosthenes of Cyrene", wrong: ["Galileo Galilei", "Ferdinand Magellan", "Pythagoras of Samos", "Lex Fridman"], question: "Who first proved that the earth is a sphere", difficulty: 3},
-
-    {id: 5, categories: ["culture", "sports"], answer: "1996 Atlanta Olympics opening Ceremony", wrong: ["2008 Beijing Olympis opening Ceremony", "Funeral of Lady Diana", "Sept. 11 terror attacks", "hello"], question: "What is the most watched (live) televised event ever?", difficulty: 2},
+    {id: 2, question: "In the NHL, who is the all-time ?", answer: "Wayne Gretzky", wrong_answer: ["Ovi", "Gordie Howe", "Jaromir Jagr", "Fleury"],
+    category: sports
+},
 ];
-
-function newGame(category) {
-
-}
-
 

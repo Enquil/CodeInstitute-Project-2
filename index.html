@@ -6,39 +6,23 @@
     <title>Quiztoffer</title>
 </head>
 <body>
-    <div id="game-window">
-        <div class="text-center" id="menu-window">
-
-            <!-- Button Panel, hides on click -->
-            <div id="button-panel">
-                <div class="text-center">
-                    <button class="fortyfive tworemfont" data-type="newgame" id="newgame">New Game</button>
-                </div>
-                <div class="text-center">
-                    <button class="fortyfive tworemfont" data-type="login" id="login">Log In</button>
-                </div>
-                <div class="text-center">
-                    <button class="fortyfive tworemfont" data-type="contact" id="contact">Contact</button>
-                </div>
-                <div class="text-center">
-                    <button class="fortyfive tworemfont" data-type="contact" id="contact">Credits</button>
-                </div>
+    <div id="main-window">
+        <div id="blue-window" class="text-center">
+            <h1>Quiztoffer</h1>
+            <div id="nav-panel">
+                <a id="newgame" class="welcome-menu block" href="categories.html">New Game</a>
+                <a id="login" data-type="login" class="welcome-menu block" href="#">Log In</a>
+                <a id="contact" class="welcome-menu block" href="#">Contact</a>
+                <a id="credits" class="welcome-menu block" href="#">Credits</a>
             </div>
 
-            <!--Links to Create account, forgot pass etc.-->
-            <div class="block" id="links-and-info">
-                <a class="tworemfont" href="#">Create Account</a>
-            </div>
-
-            <!-- Category picker, shows on click "newgame", -->
-            <div id="category-picker" class="none">
-                <button class="fortyfive inline-block tworemfont category-button" data-type="culture">Culture</button>
-                <button class="fortyfive inline-block tworemfont category-button" data-type="history">History</button>
-                <button class="fortyfive inline-block tworemfont category-button" data-type="politics">Politics</button>
-                <button class="fortyfive inline-block tworemfont category-button" data-type="sports">Sports</button>
+            <div style="margin-top: 3vh;">
+                <a href="">Github</a>
+                <a href="">LinkedIn</a>
+                <a href=""></a>                
             </div>
         </div>
     </div>
-    <script type="module" src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

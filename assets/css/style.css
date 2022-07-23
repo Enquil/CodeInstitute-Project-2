@@ -1,51 +1,36 @@
-/*body and html margin 0*/
-
 body, html {
     margin: 0;
 }
 
-
-/*set main and game window*/
-
-#game-window {
-    height: 90vh;
-    width: 90vw;
+#blue-window {
+    background-color: lightcyan;
+    margin: 15vh 20vw;
 }
-
-
-#menu-window {
-    height: 80vh;
-    width: 80vw;
-    background-color: lightblue;
-    margin: 4% 11%;
-}
-
-
-/* Display options*/
 
 .block {
     display: block;
-    text-align: center;
-}
-
-.inline-block {
-    display: inline-block;
-}
-
-.none {
-    display: none;
 }
 
 .text-center {
     text-align: center;
 }
 
-.fortyfive {
-    width: 45%;
-    margin-top: 2%;
+a {
+    text-decoration: none;
+    color: black;
+    margin-top: 1.5rem;
 }
 
-.tworemfont {
+h1 {
+    font-size: 3rem;
+}
+
+#nav-panel {
     font-size: 2rem;
-    text-decoration: none;
+}
+
+.fortyfive {
+    width: 30%;
+    margin: 10px 2%;
+    font-size: 2rem;
 }

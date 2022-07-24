@@ -63,7 +63,7 @@ function chooseCat(category) {
 
 function runGame() {
     document.getElementById("categories").classList.add("none");
-    document.getElementById("game").classList.remove("none")
+    document.getElementById("game").classList.remove("none");
 }
 
 
@@ -73,7 +73,7 @@ const questionList = [
     categories: culture,
 },
 
-{id: 2, question: "Hakarl, or fermented shark, is a delicacy of what country?", answer: "Iceland", wrong_answer: ["Norway", "China", "Trinidad & Tobago", "Will Ferrell"],
+{id: 2, question: "Hakarl, or fermented shark, is a delicacy found in which country?", answer: "Iceland", wrong_answer: ["Norway", "China", "Trinidad & Tobago", "Will Ferrell"],
     categories: culture,
 },
 

@@ -63,6 +63,7 @@ function chooseCat(category) {
 
 function runGame() {
     document.getElementById("categories").classList.add("none");
+    document.getElementById("game").classList.remove("none")
 }
 
 

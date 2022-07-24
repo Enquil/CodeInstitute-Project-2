@@ -35,3 +35,7 @@ h1 {
     margin: 10px 2%;
     font-size: 2rem;
 }
+
+.none {
+    display: none;
+}

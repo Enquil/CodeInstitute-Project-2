@@ -1,6 +1,6 @@
 # Project2
 
-This is a quiz game
+This is a quiz game in a trivia-style setting, It produces 5 random questions for the user to answer, keeps track of score.
 
 ## Content
 
@@ -32,4 +32,14 @@ This is a quiz game
 * Index
   * Basic welcome page
   * Login form with "forgot password" password function
-  * Link to creating a user 
+  * Link to creating a user
+ 
+* New game
+  * game selection buttons based on categories
+  * back button (link) to navigate back to homepage
+ 
+
+## User Experience
+---
+
+

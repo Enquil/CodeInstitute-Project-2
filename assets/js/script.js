@@ -9,31 +9,57 @@ for (let button of buttons) {
 }
 
 function chooseCat(category) {
+    let arr = [];
     if (category === "culture") {
         let questions = questionList.filter(obj => {
             return obj.categories === culture;
           });
-          console.log(questions[Math.floor(Math.random() * 3)]);
+          questions.sort(() => Math.random() - 0.5); 
+          for (let i = 0; i < 3; i++){
+            arr.push(questions[0]);
+            questions.shift();
+            console.log(arr);
+        }
 
     } else if (category === "history") {
         let questions = questionList.filter(obj => {
             return obj.categories === history;
           });
-          console.log(questions[Math.floor(Math.random() * 3)]);
+          questions.sort(() => Math.random() - 0.5); 
+          for (let i = 0; i < 3; i++){
+            arr.push(questions[0]);
+            questions.shift();
+            console.log(arr);
+        }
 
     } else if (category === "science") {
         let questions = questionList.filter(obj => {
             return obj.categories === science;
           });
-          console.log(questions[Math.floor(Math.random() * 3)]);
+          questions.sort(() => Math.random() - 0.5); 
+          for (let i = 0; i < 3; i++){
+            arr.push(questions[0]);
+            questions.shift();
+            console.log(arr);
+        }        
 
     } else if (category === "sports") {
         let questions = questionList.filter(obj => {
-            return obj.categories === sports;
+            return obj.categories === science;
           });
-          console.log(questions[Math.floor(Math.random() * 3)]);
+          questions.sort(() => Math.random() - 0.5); 
+          for (let i = 0; i < 3; i++){
+            arr.push(questions[0]);
+            questions.shift();
+            console.log(arr);
+        }
+        
     } else
     alert(`Unknown game type: ${category}`);
+}
+
+function sortQuestions(){
+    questions.sort(() => Math.random() - 0.5);
 }
 
 
@@ -44,11 +70,11 @@ function newGame(culture) {
 
 const questionList = [
 
-    {id: 1, question: "What is the highes selling music album of all time?", answer: "Michael Jackson - Thriller", wrong_answer: ["Led Zeppelin - Led Zeppelin IV", "Eagles - Hotel California", "AC/DC - Back in Black", "Will Ferrell"],
+    {id: 1, question: "What is the highest selling music album of all time?", answer: "Michael Jackson - Thriller", wrong_answer: ["Led Zeppelin - Led Zeppelin IV", "Eagles - Hotel California", "AC/DC - Back in Black", "Will Ferrell"],
     categories: culture,
 },
 
-    {id: 2, question: "How long did the Hundred Years' War actually last?", answer: "23 years", wrong_answer: ["37 years", "35 years", "51 years", "Will Ferrell"],
+    {id: 2, question: "Hakarl, or fermented shark, is a delicacy of what country?", answer: "Iceland", wrong_answer: ["Norway", "China", "Trinidad & Tobago", "Will Ferrell"],
     categories: culture,
 },
 
@@ -64,7 +90,7 @@ const questionList = [
     categories: history,
 },
 
-    {id: 6, question: "What is the fastest animal on earth?", answer: "Peregrine Falcon", wrong_answer: ["Cheetah", "Mexican free-tailed bat", "Black Marlin", "Will Ferrell"],
+    {id: 6, question: "What year did ", answer: "Peregrine Falcon", wrong_answer: ["Cheetah", "Mexican free-tailed bat", "Black Marlin", "Will Ferrell"],
     categories: history,
 },
 

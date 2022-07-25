@@ -49,7 +49,7 @@ function chooseCat(category) {
             return obj.categories === sports;
           });
           questions.sort(() => Math.random() - 0.5); 
-          for (let i = 0; i < 3; i++){
+          for (let i = 0; i < 5; i++){
             arr.push(questions[0]);
             questions.shift();
             console.log(arr);
@@ -64,6 +64,7 @@ function chooseCat(category) {
 function runGame() {
     document.getElementById("categories").classList.add("none");
     document.getElementById("game").classList.remove("none");
+    document.getElementById("back").classList.add("none");
 }
 
 

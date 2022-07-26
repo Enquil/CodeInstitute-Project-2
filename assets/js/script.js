@@ -65,10 +65,23 @@ function runGame() {
     document.getElementById("categories").classList.add("none");
     document.getElementById("game").classList.remove("none");
     document.getElementById("back").classList.add("none");
-}
+    let answers = document.getElementsByClassName("answer");
+    let question = document.getElementById("question");
+
+    for (let i = 0; i < 4; i++) {
+        let x = arr[0].wrong_answer;
+        x.sort(() => Math.random() - 0.5);
+        question.innerHTML = arr[0].question;
+        answers[0].innerHTML = x[0];
+        answers[1].innerHTML = x[1];
+        answers[2].innerHTML = x[2];
+        answers[3].innerHTML = x[3];
+    }
+    }
 
 
-const questionList = [
+
+    const questionList = [
 
 {id: 1, question: "What is the highest selling music album of all time?", answer: "Michael Jackson - Thriller", wrong_answer: ["Led Zeppelin - Led Zeppelin IV", "Eagles - Hotel California", "AC/DC - Back in Black", "Will Ferrell"],
     categories: culture,
@@ -128,7 +141,8 @@ const questionList = [
 
 {id: 15, question: "Where did coffee originate from?", answer: "Ethiopia", wrong_answer: ["Tanzania", "Jordan", "Saudi Arabia", "Will Ferrell"],
     categories: culture,
-},];
+},
+];
 
 
 

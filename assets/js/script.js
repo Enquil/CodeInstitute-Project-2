@@ -1,5 +1,6 @@
 let buttons = document.getElementsByTagName("button");
 let arr = [];
+let y = [];
 
 for (let button of buttons) {
     button.addEventListener("click", function() {
@@ -16,7 +17,7 @@ function chooseCat(category) {
             return obj.categories === (culture);
           });
           questions.sort(() => Math.random() - 0.5); 
-          for (let i = 0; i < 3; i++){
+          for (let i = 0; i < 4; i++){
             arr.push(questions[0]);
             questions.shift();
             console.log(arr);
@@ -27,7 +28,7 @@ function chooseCat(category) {
             return obj.categories === history;
           });
           questions.sort(() => Math.random() - 0.5); 
-          for (let i = 0; i < 3; i++){
+          for (let i = 0; i < 4; i++){
             arr.push(questions[0]);
             questions.shift();
             console.log(arr);
@@ -38,7 +39,7 @@ function chooseCat(category) {
             return obj.categories === science;
           });
           questions.sort(() => Math.random() - 0.5); 
-          for (let i = 0; i < 3; i++){
+          for (let i = 0; i < 4; i++){
             arr.push(questions[0]);
             questions.shift();
             console.log(arr);
@@ -66,15 +67,17 @@ function runGame() {
     document.getElementById("game").classList.remove("none");
     document.getElementById("back").classList.add("none");
     document.getElementById("question").innerText = arr[0].question;
+    document.getElementById("answer1").addEventListener("click", runGame);
+    document.getElementById("answer2").addEventListener("click", runGame);
+    document.getElementById("answer3").addEventListener("click", runGame);
+    document.getElementById("answer4").addEventListener("click", runGame);
     let x = arr[0].wrong_answer;
-    let y = [];
     let z = arr[0].answer;
+    shuffleStuff();
     y.push(document.getElementById("answer1"));
     y.push(document.getElementById("answer2"));
     y.push(document.getElementById("answer3"));
     y.push(document.getElementById("answer4"));
-    y.sort(() => Math.random() - 0.5);
-
     for (let i = 0; i < 4; i++) {
         y[i].innerText = x[i];
     }
@@ -82,23 +85,26 @@ function runGame() {
     arr.shift();
 }
 
+function shuffleStuff() {
+    y.sort(() => Math.random() - 0.5);
+}
 
 
     const questionList = [
 
-{id: 1, question: "What is the highest selling music album of all time?", answer: "Michael Jackson - Thriller", wrong_answer: ["Led Zeppelin - Led Zeppelin IV", "Eagles - Hotel California", "AC/DC - Back in Black", "Will Ferrell"],
+{id: 1, question: "What is the highest selling music album of all time?", answer: "Michael Jackson - Thriller", wrong_answer: ["Led Zeppelin - Led Zeppelin IV", "Eagles - Hotel California", "AC/DC - Back in Black", "Adele - 21"],
     categories: culture,
 },
 
-{id: 2, question: "Hakarl, or fermented shark, is a delicacy found in which country?", answer: "Iceland", wrong_answer: ["Norway", "China", "Trinidad & Tobago", "Will Ferrell"],
+{id: 2, question: "Hakarl, or fermented shark, is a delicacy found in which country?", answer: "Iceland", wrong_answer: ["Norway", "China", "Trinidad & Tobago", "Greenland"],
     categories: culture,
 },
 
-{id: 3, question: "Which of these are NOT a play written by Shakespeare", answer: "Edward II", wrong_answer: ["Richard III", "The Merchant of Venice", "Romeo and Juliet", "Will Ferrell"],
+{id: 3, question: "Which of these are NOT a play written by Shakespeare", answer: "Edward II", wrong_answer: ["Richard III", "The Merchant of Venice", "Romeo and Juliet", "Henry V"],
     categories: culture,
 },
 
-{id: 4, question: "How long did the Hundred Years' War actually last?", answer: "23 years", wrong_answer: ["37 years", "35 years", "51 years", "Will Ferrell"],
+{id: 4, question: "How long did the Hundred Years' War actually last?", answer: "23 years", wrong_answer: ["37 years", "35 years", "51 years", "13 years"],
     categories: history,
 },
     
@@ -106,7 +112,7 @@ function runGame() {
     categories: history,
 },
 
-{id: 6, question: "What year did ", answer: "Peregrine Falcon", wrong_answer: ["Cheetah", "Mexican free-tailed bat", "Black Marlin", "Will Ferrell"],
+{id: 6, question: "What is the name of the site, on which Napoleon was defeated?", answer: "Waterloo", wrong_answer: ["Trafalgar", "Ligny", "Borodino", "Leipzig"],
     categories: history,
 },
 

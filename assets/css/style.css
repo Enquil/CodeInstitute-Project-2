@@ -26,6 +26,20 @@ a {
     font-size: 2rem;
 }
 
+    /*for menu buttons and answer divs*/
+.fortyfive {
+    width: 30%;
+    margin: 10px 2%;
+    font-size: 2rem;
+}
+
+/*answerboxes styling*/
+.answerbox {
+    background-color: coral;
+    height: auto;
+    width: 45%;
+}
+
     /*block element*/
 .block {
     display: block;
@@ -40,15 +54,6 @@ a {
 .text-center {
     text-align: center;
 }
-
-
-    /*for menu buttons and answer divs*/
-.fortyfive {
-    width: 30%;
-    margin: 10px 2%;
-    font-size: 2rem;
-}
-
 
     /*0 vis on div*/
 .none {

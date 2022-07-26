@@ -1,41 +1,51 @@
+    /*set margins to 0*/
 body, html {
     margin: 0;
 }
 
-#blue-window {
-    background-color: lightcyan;
-    margin: 15vh 20vw;
-
+    /*Quiztoffer*/
+h1 {
+    font-size: 3rem;
 }
 
-.block {
-    display: block;
-}
-
-.text-center {
-    text-align: center;
-}
-
+    /*links shared attributes*/
 a {
     text-decoration: none;
     color: black;
     margin-top: 1.5rem;
 }
 
-h1 {
-    font-size: 3rem;
+    /*window for game and menus*/
+#blue-window {
+    background-color: lightcyan;
+    margin: 15vh 20vw;
 }
 
+    /*nav menu font size*/
 #nav-panel {
     font-size: 2rem;
 }
 
+    /*block element*/
+.block {
+    display: block;
+}
+
+    /*center text*/
+.text-center {
+    text-align: center;
+}
+
+
+    /*for menu buttons and answer divs*/
 .fortyfive {
     width: 30%;
     margin: 10px 2%;
     font-size: 2rem;
 }
 
+
+/*0 vis on div*/
 .none {
     display: none;
 }

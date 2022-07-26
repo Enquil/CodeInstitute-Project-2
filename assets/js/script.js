@@ -65,15 +65,22 @@ function runGame() {
     document.getElementById("categories").classList.add("none");
     document.getElementById("game").classList.remove("none");
     document.getElementById("back").classList.add("none");
-    let answers = document.getElementsByClassName("answer");
-    let question = document.getElementById("question");
+    document.getElementById("question").innerText = arr[0].question;
+    let x = arr[0].wrong_answer;
+    let y = [];
+    let z = arr[0].answer;
+    y.push(document.getElementById("answer1"));
+    y.push(document.getElementById("answer2"));
+    y.push(document.getElementById("answer3"));
+    y.push(document.getElementById("answer4"));
+    y.sort(() => Math.random() - 0.5);
 
     for (let i = 0; i < 4; i++) {
-        let x = arr[0].wrong_answer;
-        let y = document.getElementById("answer");
-        y.sort(() => Math.random() - 0.5);
-        y[0].innerHTML = x[0];
-    }}
+        y[i].innerText = x[i];
+    }
+    y[0].innerText = z;
+    arr.shift();
+}
 
 
 
@@ -127,7 +134,7 @@ function runGame() {
     categories: sports,
 },
 
-{id: 13, question: "Who is the leftmost president depicted on Mt. Rushmore?", answer: "Abraham Lincoln", wrong_answer: ["George Washington", "Theodore Roesevelt", "Thomas Jefferson", "Will Ferrell"],
+{id: 13, question: "Who is the rightmost president depicted on Mt. Rushmore?", answer: "Abraham Lincoln", wrong_answer: ["George Washington", "Theodore Roesevelt", "Thomas Jefferson", "Will Ferrell"],
     categories: history,
 },
 

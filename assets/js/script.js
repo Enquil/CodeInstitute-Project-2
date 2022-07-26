@@ -48,7 +48,7 @@ function chooseCat(category) {
         let questions = questionList.filter(obj => {
             return obj.categories === sports;
           });
-          questions.sort(() => Math.random() - 0.5); 
+          questions.sort(() => Math.random() - 0.5);
           for (let i = 0; i < 5; i++){
             arr.push(questions[0]);
             questions.shift();
@@ -70,14 +70,10 @@ function runGame() {
 
     for (let i = 0; i < 4; i++) {
         let x = arr[0].wrong_answer;
-        x.sort(() => Math.random() - 0.5);
-        question.innerHTML = arr[0].question;
-        answers[0].innerHTML = x[0];
-        answers[1].innerHTML = x[1];
-        answers[2].innerHTML = x[2];
-        answers[3].innerHTML = x[3];
-    }
-    }
+        let y = document.getElementById("answer");
+        y.sort(() => Math.random() - 0.5);
+        y[0].innerHTML = x[0];
+    }}
 
 
 

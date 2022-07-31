@@ -72,7 +72,7 @@ function runGame() {
     document.getElementById("answer1").addEventListener("click", runGame);
     document.getElementById("answer2").addEventListener("click", runGame);
     document.getElementById("answer3").addEventListener("click", runGame);
-    document.getElementById("answer4").addEventListener("click", runGame, scoreBoard);
+    document.getElementById("answer4").addEventListener("click", runGame);
     x = arr[0].wrong_answer;
     let z = arr[0].answer;
     y.push(document.getElementById("answer1"));
@@ -97,6 +97,8 @@ function shuffleStuff() {
 }
 
 function checkAnswer () {
+    let userAnswer = this.innerText;
+    console.log(userAnswer);
     arr.shift();
 }
 

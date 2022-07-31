@@ -1,7 +1,10 @@
 let buttons = document.getElementsByTagName("button");
 let arr = [];
 let y = [];
+let x = [];
 
+
+//button event listeners and category choice
 for (let button of buttons) {
     button.addEventListener("click", function() {
         if (this.getAttribute("data-type") === "culture" || "history" || "science" || "sports");
@@ -10,6 +13,8 @@ for (let button of buttons) {
     });
 }
 
+
+// Category choice and make an array for the game
 function chooseCat(category) {
 
     if (category === "culture") {
@@ -20,7 +25,6 @@ function chooseCat(category) {
           for (let i = 0; i < 4; i++){
             arr.push(questions[0]);
             questions.shift();
-            console.log(arr);
         }
 
     } else if (category === "history") {
@@ -31,7 +35,6 @@ function chooseCat(category) {
           for (let i = 0; i < 4; i++){
             arr.push(questions[0]);
             questions.shift();
-            console.log(arr);
         }
 
     } else if (category === "science") {
@@ -39,11 +42,9 @@ function chooseCat(category) {
             return obj.categories === science;
           });
           questions.sort(() => Math.random() - 0.5); 
-          for (let i = 0; i < 4; i++){
+          for (let i = 0; i < 5; i++){
             arr.push(questions[0]);
-            questions.shift();
-            console.log(arr);
-        }        
+        }    
 
     } else if (category === "sports") {
         let questions = questionList.filter(obj => {
@@ -53,7 +54,6 @@ function chooseCat(category) {
           for (let i = 0; i < 5; i++){
             arr.push(questions[0]);
             questions.shift();
-            console.log(arr);
         }
 
     } else
@@ -62,6 +62,8 @@ function chooseCat(category) {
     runGame();
 }
 
+
+// Game 
 function runGame() {
     document.getElementById("categories").classList.add("none");
     document.getElementById("game").classList.remove("none");
@@ -70,29 +72,37 @@ function runGame() {
     document.getElementById("answer1").addEventListener("click", runGame);
     document.getElementById("answer2").addEventListener("click", runGame);
     document.getElementById("answer3").addEventListener("click", runGame);
-    document.getElementById("answer4").addEventListener("click", runGame);
-    let x = arr[0].wrong_answer;
+    document.getElementById("answer4").addEventListener("click", runGame, scoreBoard);
+    x = arr[0].wrong_answer;
     let z = arr[0].answer;
-    shuffleStuff();
     y.push(document.getElementById("answer1"));
     y.push(document.getElementById("answer2"));
     y.push(document.getElementById("answer3"));
     y.push(document.getElementById("answer4"));
+    shuffleStuff();
+    
+    //puts wrong answers in divs
     for (let i = 0; i < 4; i++) {
         y[i].innerText = x[i];
     }
-    y[0].innerText = z;
+    // sets right answer in w/e div is first in the array
+    y[Math.floor(Math.random() * 4)].innerText = z;
+    arr.shift();
+}
+    /* erase, make "complicated" function.
+    destroy shuffleStuff
+    */
+function shuffleStuff() {
+    x.sort(() => Math.random() - 0.5);
+}
+
+function checkAnswer () {
     arr.shift();
 }
 
-function shuffleStuff() {
-    y.sort(() => Math.random() - 0.5);
-}
-
-
     const questionList = [
 
-{id: 1, question: "What is the highest selling music album of all time?", answer: "Michael Jackson - Thriller", wrong_answer: ["Led Zeppelin - Led Zeppelin IV", "Eagles - Hotel California", "AC/DC - Back in Black", "Adele - 21"],
+{id: 1, question: "What is the highest selling music album of all time?", answer: "Thriller", wrong_answer: ["Led Zeppelin IV", "Hotel California", "Back in Black", "21"],
     categories: culture,
 },
 
@@ -112,7 +122,7 @@ function shuffleStuff() {
     categories: history,
 },
 
-{id: 6, question: "What is the name of the site, on which Napoleon was defeated?", answer: "Waterloo", wrong_answer: ["Trafalgar", "Ligny", "Borodino", "Leipzig"],
+{id: 6, question: "What is the name of the site, on which Napoleon was defeated once and for all?", answer: "Waterloo", wrong_answer: ["Trafalgar", "Ligny", "Borodino", "Leipzig"],
     categories: history,
 },
 
@@ -120,7 +130,7 @@ function shuffleStuff() {
     categories: science,
 },
 
-{id: 8, question: "What weighs the most?", answer: "An average chicken on the surface of the Sun", wrong_answer: ["A small child on earth", "Will Ferrell on the moon", "2 average chickens on earth", "Will Ferrell"],
+{id: 8, question: "What weighs the most?", answer: "A chicken on the surface of the Sun", wrong_answer: ["A small child on earth", "Will Ferrell on the moon", "2 average chickens on earth", "A cat on Mars"],
     categories: science,
 },
 

@@ -1,8 +1,9 @@
 let buttons = document.getElementsByTagName("button");
-let arr = [];
-let y = [];
-let x = [];
-let z = "";
+let arr = []; // array for questions
+let y = []; // used with z to place correct answer randomly
+let x = []; // wrong answer array for randomizing answers
+let z = ""; // is correct answer
+let rightArr = []; //pushes here if correct
 
 //button event listeners and category choice
 for (let button of buttons) {
@@ -44,6 +45,7 @@ function chooseCat(category) {
           questions.sort(() => Math.random() - 0.5); 
           for (let i = 0; i < 5; i++){
             arr.push(questions[0]);
+            questions.shift();
         }    
 
     } else if (category === "sports") {
@@ -99,15 +101,16 @@ function checkAnswer () {
     let userAnswer = this.innerText;
     if (userAnswer === arr[0].answer) {
         incrementScore();
+        console.log(rightArr);
         arr.shift();
-        runGame();
-    } else;
+    } else 
     arr.shift();
+    
     runGame();
 }
 
 function incrementScore() {
-    
+    rightArr.push(arr[0]);
 }
 
     const questionList = [

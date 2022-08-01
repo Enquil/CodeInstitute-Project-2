@@ -2,7 +2,7 @@ let buttons = document.getElementsByTagName("button");
 let arr = [];
 let y = [];
 let x = [];
-
+let z = "";
 
 //button event listeners and category choice
 for (let button of buttons) {
@@ -69,10 +69,10 @@ function runGame() {
     document.getElementById("game").classList.remove("none");
     document.getElementById("back").classList.add("none");
     document.getElementById("question").innerText = arr[0].question;
-    document.getElementById("answer1").addEventListener("click", runGame);
-    document.getElementById("answer2").addEventListener("click", runGame);
-    document.getElementById("answer3").addEventListener("click", runGame);
-    document.getElementById("answer4").addEventListener("click", runGame);
+    document.getElementById("answer1").addEventListener("click", checkAnswer);
+    document.getElementById("answer2").addEventListener("click", checkAnswer);
+    document.getElementById("answer3").addEventListener("click", checkAnswer);
+    document.getElementById("answer4").addEventListener("click", checkAnswer);
     x = arr[0].wrong_answer;
     let z = arr[0].answer;
     y.push(document.getElementById("answer1"));
@@ -87,7 +87,6 @@ function runGame() {
     }
     // sets right answer in w/e div is first in the array
     y[Math.floor(Math.random() * 4)].innerText = z;
-    arr.shift();
 }
     /* erase, make "complicated" function.
     destroy shuffleStuff
@@ -98,8 +97,17 @@ function shuffleStuff() {
 
 function checkAnswer () {
     let userAnswer = this.innerText;
-    console.log(userAnswer);
+    if (userAnswer === arr[0].answer) {
+        incrementScore();
+        arr.shift();
+        runGame();
+    } else;
     arr.shift();
+    runGame();
+}
+
+function incrementScore() {
+    
 }
 
     const questionList = [

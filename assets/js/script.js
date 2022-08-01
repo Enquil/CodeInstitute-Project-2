@@ -1,11 +1,11 @@
 let buttons = document.getElementsByTagName("button");
-let arr = []; // array for questions
-let y = []; // used with z to place correct answer randomly
-let x = []; // wrong answer array for randomizing answers
-let z = ""; // is correct answer
-let rightArr = []; //pushes here if correct
+let arr = [];   // array for questions
+let y = [];     // used with z to place correct answer randomly
+let x = [];     // wrong answer array for randomizing answers
+let z = "";     // is correct answer
+let rightArr = [];  //pushes here if correct
 
-//button event listeners and category choice
+    //button event listeners and category choice
 for (let button of buttons) {
     button.addEventListener("click", function() {
         if (this.getAttribute("data-type") === "culture" || "history" || "science" || "sports");
@@ -15,7 +15,7 @@ for (let button of buttons) {
 }
 
 
-// Category choice and make an array for the game
+    // Category choice and make an array for the game
 function chooseCat(category) {
 
     if (category === "culture") {
@@ -23,7 +23,7 @@ function chooseCat(category) {
             return obj.categories === (culture);
           });
           questions.sort(() => Math.random() - 0.5); 
-          for (let i = 0; i < 4; i++){
+          for (let i = 0; i < 5; i++){
             arr.push(questions[0]);
             questions.shift();
         }
@@ -33,7 +33,7 @@ function chooseCat(category) {
             return obj.categories === history;
           });
           questions.sort(() => Math.random() - 0.5); 
-          for (let i = 0; i < 4; i++){
+          for (let i = 0; i < 5; i++){
             arr.push(questions[0]);
             questions.shift();
         }
@@ -61,26 +61,31 @@ function chooseCat(category) {
     } else
     alert(`Unknown game type: ${category}`);
 
+    setTable();
     runGame();
 }
 
-
-// Game 
-function runGame() {
+    // removes category div and back button, adds game"table", puts answer divs into an array
+function setTable() {
     document.getElementById("categories").classList.add("none");
     document.getElementById("game").classList.remove("none");
     document.getElementById("back").classList.add("none");
-    document.getElementById("question").innerText = arr[0].question;
-    document.getElementById("answer1").addEventListener("click", checkAnswer);
-    document.getElementById("answer2").addEventListener("click", checkAnswer);
-    document.getElementById("answer3").addEventListener("click", checkAnswer);
-    document.getElementById("answer4").addEventListener("click", checkAnswer);
-    x = arr[0].wrong_answer;
-    let z = arr[0].answer;
     y.push(document.getElementById("answer1"));
     y.push(document.getElementById("answer2"));
     y.push(document.getElementById("answer3"));
     y.push(document.getElementById("answer4"));
+    document.getElementById("answer1").addEventListener("click", checkAnswer);
+    document.getElementById("answer2").addEventListener("click", checkAnswer);
+    document.getElementById("answer3").addEventListener("click", checkAnswer);
+    document.getElementById("answer4").addEventListener("click", checkAnswer);
+}
+
+
+    // Game 
+function runGame() {
+    document.getElementById("question").innerText = arr[0].question;
+    let x = arr[0].wrong_answer;
+    let z = arr[0].answer;
     shuffleStuff();
     
     //puts wrong answers in divs
@@ -90,6 +95,8 @@ function runGame() {
     // sets right answer in w/e div is first in the array
     y[Math.floor(Math.random() * 4)].innerText = z;
 }
+
+
     /* erase, make "complicated" function.
     destroy shuffleStuff
     */
@@ -103,10 +110,11 @@ function checkAnswer () {
         incrementScore();
         console.log(rightArr);
         arr.shift();
-    } else 
+    } else {
     arr.shift();
-    
-    runGame();
+}
+
+runGame();
 }
 
 function incrementScore() {
@@ -147,7 +155,7 @@ function incrementScore() {
     categories: science,
 },
 
-{id: 9, question: "Who was it, that first discovered that the earth is spherical?", answer: "Some greek", wrong_answer: ["Some other greek", "Some inventor", "Someone else", "Will Ferrell"],
+{id: 9, question: "Who was it, that first discovered that the earth is spherical?", answer: "Eratosthenes of Cyrene", wrong_answer: ["Pythagoras of Samos", "Galileo Galilei", "Isaac Newton", "Will Ferrell"],
     categories: science,
 },
 
@@ -173,6 +181,18 @@ function incrementScore() {
 
 {id: 15, question: "Where did coffee originate from?", answer: "Ethiopia", wrong_answer: ["Tanzania", "Jordan", "Saudi Arabia", "Will Ferrell"],
     categories: culture,
+},
+
+{id: 16, question: "What is the most visited country in the world?", answer: "France", wrong_answer: ["Spain", "United States", "China", "Turkey"],
+    categories: culture,
+},
+
+{id: 17, question: "What is the most visited city in the world?", answer: "Bangkok", wrong_answer: ["Paris", "London", "Dubai", "Singapore"],
+    categories: culture,
+},
+
+{id: 18, question: "Of all the natural sciences, which one is the oldest?", answer: "Astronomy", wrong_answer: ["Biology", "Chemistry", "Physics", "Oceanography"],
+    categories: science,
 },
 ];
 

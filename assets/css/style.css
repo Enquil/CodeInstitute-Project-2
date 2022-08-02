@@ -5,7 +5,8 @@ body, html {
 
     /*Quiztoffer*/
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    margin-top: 1rem;
 }
 
     /*links shared attributes*/
@@ -19,18 +20,19 @@ a {
 #blue-window {
     background-color: lightcyan;
     margin: 15vh 20vw;
+    border: 1px solid black;
 }
 
     /*nav menu font size*/
 #nav-panel {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
     /*for menu buttons and answer divs*/
 .fortyfive {
     width: 30%;
     margin: 10px 2%;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 /*answerboxes styling*/
@@ -59,3 +61,15 @@ a {
 .none {
     display: none;
 }
+
+ /*mobile scaling*/
+@media only screen and (max-width: 1000px) {
+    #blue-window, #main-window{
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+    h1 {
+        margin-top: 2rem;
+    }
+  }

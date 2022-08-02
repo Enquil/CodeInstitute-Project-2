@@ -83,7 +83,7 @@ function setTable() {
 
     // Game 
 function runGame() {
-    document.getElementById("question").innerText = arr[0].question;
+    document.getElementById("question-text").innerText = arr[0].question;
     let x = arr[0].wrong_answer;
     let z = arr[0].answer;
     shuffleStuff();
@@ -131,7 +131,7 @@ function incrementScore() {
     categories: culture,
 },
 
-{id: 3, question: "Which of these are NOT a play written by Shakespeare", answer: "Edward II", wrong_answer: ["Richard III", "The Merchant of Venice", "Romeo and Juliet", "Henry V"],
+{id: 3, question: "Which of these are NOT a play written by Shakespeare", answer: "Edward II", wrong_answer: ["Richard III", "The Tempest", "Romeo and Juliet", "Henry V"],
     categories: culture,
 },
 

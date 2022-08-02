@@ -65,7 +65,7 @@ function chooseCat(category) {
     runGame();
 }
 
-    // removes category div and back button, adds game"table", puts answer divs into an array
+    // removes category div and back button, adds game "table", puts answers into an array
 function setTable() {
     document.getElementById("categories").classList.add("none");
     document.getElementById("game").classList.remove("none");

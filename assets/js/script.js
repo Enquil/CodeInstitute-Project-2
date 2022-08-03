@@ -44,6 +44,8 @@ function setTable() {
     document.getElementById("answer2").addEventListener("click", checkAnswer);
     document.getElementById("answer3").addEventListener("click", checkAnswer);
     document.getElementById("answer4").addEventListener("click", checkAnswer); // move into array
+
+    document.getElementsByClassName("fortyfive").addEventListener("click", checkAnswer);
 }
 
 
@@ -148,7 +150,7 @@ function incrementScore() {
     categories: "science"
 },
 
-{id: 15, question: "Where did coffee originate from?", answer: "Ethiopia", wrong_answer: ["Tanzania", "Jordan", "Saudi Arabia", "Will Ferrell"],
+{id: 15, question: "Where does coffee originate?", answer: "Ethiopia", wrong_answer: ["Tanzania", "Jordan", "Saudi Arabia", "Will Ferrell"],
     categories: "culture"
 },
 

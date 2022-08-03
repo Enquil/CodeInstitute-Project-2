@@ -39,6 +39,7 @@ function setTable() {
     y.push(document.getElementById("answer2"));
     y.push(document.getElementById("answer3"));
     y.push(document.getElementById("answer4"));
+
     //having hard time of calling of these all at once
     document.getElementById("answer1").addEventListener("click", checkAnswer);
     document.getElementById("answer2").addEventListener("click", checkAnswer);
@@ -50,7 +51,7 @@ function setTable() {
     // Game 
 function runGame() {
 if (arr.length === 0) {
-    alert("out of questions");
+    endGame();
 } else {
     document.getElementById("question-text").innerText = arr[0].question;
     let x = arr[0].wrong_answer;
@@ -90,6 +91,11 @@ function incrementScore() {
     rightArr.push(arr[0]);
 }
 
+function endGame () {
+    document.getElementById("game").classList.add("none");
+    document.getElementById("back").classList.remove("none");
+    document.getElementById("blue-window").innerHTML = `<h2>you got ${rightArr.length}/5 correct</h2>`;
+}
     const questionList = [
 
 {id: 1, question: "What is the highest selling music album of all time?", answer: "Thriller", wrong_answer: ["Led Zeppelin IV", "Hotel California", "Back in Black", "21"],

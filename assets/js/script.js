@@ -8,8 +8,7 @@ let rightArr = [];  //pushes here if correct
     //button event listeners and category choice
 for (let button of buttons) {
     button.addEventListener("click", function() {
-        if (this.getAttribute("data-type") === "culture" || "history" || "science" || "sports");
-            category = this.getAttribute("data-type");
+            category = this.getAttribute("id");
             chooseCat(category);
     });
 }
@@ -40,12 +39,11 @@ function setTable() {
     y.push(document.getElementById("answer2"));
     y.push(document.getElementById("answer3"));
     y.push(document.getElementById("answer4"));
+    //having hard time of calling of these all at once
     document.getElementById("answer1").addEventListener("click", checkAnswer);
     document.getElementById("answer2").addEventListener("click", checkAnswer);
     document.getElementById("answer3").addEventListener("click", checkAnswer);
-    document.getElementById("answer4").addEventListener("click", checkAnswer); // move into array
-
-    document.getElementsByClassName("fortyfive").addEventListener("click", checkAnswer);
+    document.getElementById("answer4").addEventListener("click", checkAnswer);
 }
 
 
@@ -150,7 +148,7 @@ function incrementScore() {
     categories: "science"
 },
 
-{id: 15, question: "Where does coffee originate?", answer: "Ethiopia", wrong_answer: ["Tanzania", "Jordan", "Saudi Arabia", "Will Ferrell"],
+{id: 15, question: "Where did coffee originate?", answer: "Ethiopia", wrong_answer: ["Tanzania", "Jordan", "Saudi Arabia", "Will Ferrell"],
     categories: "culture"
 },
 

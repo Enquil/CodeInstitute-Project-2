@@ -74,6 +74,7 @@ function shuffleStuff() {
     wrongArr.sort(() => Math.random() - 0.5);
 }
 
+
 function checkAnswer () {
     let userAnswer = this.innerText;
     if (userAnswer === arr[0].answer) {
@@ -87,16 +88,20 @@ function checkAnswer () {
 runGame();
 }
 
+
 function incrementScore() {
     rightArr.push(arr[0]);
 }
+
 
 function endGame () {
     document.getElementById("game").classList.add("none");
     document.getElementById("back").classList.remove("none");
     document.getElementById("blue-window").innerHTML = `<h2>you got ${rightArr.length}/5 correct</h2>`;
 }
-    const questionList = [
+
+
+const questionList = [
 
 {id: 1, question: "What is the highest selling music album of all time?", answer: "Thriller", wrong_answer: ["Led Zeppelin IV", "Hotel California", "Back in Black", "21"],
     categories: "culture"

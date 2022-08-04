@@ -1,8 +1,8 @@
 let buttons = document.getElementsByTagName("button");
 let arr = [];   // array for questions
 let y = [];     // used with z to place correct answer randomly
-let x = [];     // wrong answer array for randomizing answers
-let z = "";     // is correct answer
+let wrongArr = [];     // wrong answer array for randomizing answers
+let correctAnswer = "";     // is correct answer
 let rightArr = [];  //pushes here if correct
 
     //button event listeners and category choice
@@ -40,7 +40,7 @@ function setTable() {
     y.push(document.getElementById("answer3"));
     y.push(document.getElementById("answer4"));
 
-    //having hard time of calling of these all at once
+    //having hard time of calling all of these all at once
     document.getElementById("answer1").addEventListener("click", checkAnswer);
     document.getElementById("answer2").addEventListener("click", checkAnswer);
     document.getElementById("answer3").addEventListener("click", checkAnswer);
@@ -54,16 +54,16 @@ if (arr.length === 0) {
     endGame();
 } else {
     document.getElementById("question-text").innerText = arr[0].question;
-    let x = arr[0].wrong_answer;
-    let z = arr[0].answer;
+    let wrongArr = arr[0].wrong_answer;
+    let correctAnswer = arr[0].answer;
     shuffleStuff();
     
     //puts wrong answers in divs
     for (let i = 0; i < 4; i++) {
-        y[i].innerText = x[i];
+        y[i].innerText = wrongArr[i];
     }
     // sets right answer in w/e div is first in the array
-    y[Math.floor(Math.random() * 4)].innerText = z;
+    y[Math.floor(Math.random() * 4)].innerText = correctAnswer;
 }}
 
 
@@ -71,7 +71,7 @@ if (arr.length === 0) {
     destroy shuffleStuff
     */
 function shuffleStuff() {
-    x.sort(() => Math.random() - 0.5);
+    wrongArr.sort(() => Math.random() - 0.5);
 }
 
 function checkAnswer () {

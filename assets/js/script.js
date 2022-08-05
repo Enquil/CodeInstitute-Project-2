@@ -29,5 +29,9 @@ function handleSubmit() {
 }
 
 function meow() {
-    console.log("hello");
+    while (top.hasChildNodes, middle.hasChildNodes, bottom.hasChildNodes()) {
+        top.removeChild(top.firstChild);
+        middle.removeChild(middle.firstChild);
+        bottom.removeChild(bottom.firstChild);
+    }
 }

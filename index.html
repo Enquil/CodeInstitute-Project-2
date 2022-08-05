@@ -6,25 +6,33 @@
     <title>Quiztoffer</title>
 </head>
 <body>
-    <div id="main-window">
-        <div id="blue-window" class="text-center">
-            <div id="head">
-                <h1>Quiztoffer</h1>
-                <p>A quiz game by Jim Olesen</p>
-            </div>
-
-            <div id="main">
-                <a id="newgame" class="welcome-menu block" href="#">New Game</a>
-                <a id="statistics" class="welcome-menu block" href="#">Stats</a>
-            </div>
-
-            <div id="foot">
+    <div id="main">
+        <div id="top" class="text-center">
+            <h1>
+                Quiztoffer
+            </h1>
+            <p>
+                A quizgame by Jim Olesen
+            </p>
+        </div>
+    
+        <div id="middle" class="text-center">
+            <form id="userdata" name="userdata" method="post" action="script.js">
+                <label for="username" class="block">Enter a Username</label>
+                <input id="username" name="username" type="text" required> <br>
+                <button id="play" type="submit">Let's go!</button>
+            </form>
+        </div>
+    
+        <div id="bottom">
+            <footer class="text-center">
                 <a href="">Github</a>
                 <a href="">LinkedIn</a>
-                <a href=""></a>                
-            </div>
+                <p>copyright © Jim Olesen 2022</p> 
+            </footer>
         </div>
     </div>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>

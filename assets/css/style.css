@@ -6,7 +6,7 @@ body, html {
 
 a {
     text-decoration: none;
-    color: blue;
+    color: #42BFDD;
     font-size: 1.5rem;
 }
 
@@ -15,18 +15,21 @@ button {
     padding: 1rem;
     width: 25%;
     border: 1px solid gray;
-    background-color: lightblue;
+    background-color: #0C1713;
+    color: #FFFFFF;
     margin: 1rem;
 }
 
 button:hover {
-    background-color: white;
+    background-color: #42BFDD;
 }
 
 
-h1 {
+h1, h2 {
+    color: #FFFFFF;
     font-size: 4rem;
-    margin-top: 2rem;
+    margin-top: 0;
+    padding-top: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -40,10 +43,12 @@ input {
 }
 
 label {
+    color: whitesmoke;
     font-size: 2.5rem;
 }
 
 p {
+    color: whitesmoke;
     font-size: 1.5rem;
 }
 
@@ -51,11 +56,9 @@ p {
 /*--- IDS ---*/
 
 #main {
-    border: 1px solid #000000;
-    height: auto;
-    width: auto;
-    margin: 5vh 20vw;
-    background-color: beige;
+    height: 100vh;
+    width: 100%;
+    background-color: #6457A6;
 }
 
 #middle {
@@ -73,4 +76,13 @@ p {
     text-align: center;
 }
 
+.fortyfive {
+    width: 45%;
+    height: 15%;
+}
 
+@media only screen and (max-width: 1000px) {
+    h1 {
+      padding-top: 30%;
+    }
+  }

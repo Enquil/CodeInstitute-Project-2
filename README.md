@@ -23,7 +23,7 @@ This is a quiz game in a trivia-style setting, It produces 5 random questions fo
   * HTML
   * JavaScript
 
-* Wanted to do some json and php, this might still be incorporated in terms of the questions, but the scale does not warrant it at this point.
+* Wanted to do some json and store users and questions with MongoDB, this might still be incorporated, but the scale does not warrant it at this point and would be more of an excercise than actually being useful.
 
 
 ## Pages and Features

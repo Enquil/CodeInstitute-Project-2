@@ -44,5 +44,5 @@ This is a quiz game in a trivia-style setting, It produces 5 random questions fo
   * Statistics for current session
 
 * Colours
- * Went with 
+  * Went with 
 

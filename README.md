@@ -39,9 +39,9 @@ This is a quiz game in a trivia-style setting, It produces 5 random questions fo
 ---
 
 * Overarching Design
- * One "window"(main div) contains everything, text is generated with JavaScript.
- * As simple as possible to start playing, pick a username, a category, a difficulty and you're off.
- * Statistics for current session
+  * One "window"(main div) contains everything, text is generated with JavaScript.
+  * As simple as possible to start playing, pick a username, a category, a difficulty and you're off.
+  * Statistics for current session
 
 * Colours
  * Went with 

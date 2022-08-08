@@ -5,6 +5,7 @@ let buttonArr = [];
 let rightArr = [];
 let sessionGames = 0;
 let sessionCorrect = 0;
+
 /**
  * Gets the username from the input,
  * Clears all text content,
@@ -14,16 +15,8 @@ function handleSubmit() {
     event.preventDefault();
 
     let user = document.getElementById("username").value;
-
-    while (game.hasChildNodes()) {
-        game.removeChild(game.firstChild);
-    }
-    
-    game.innerHTML = `<h2>Welcome ${user}</h2><br> 
-                    <h3>What would you like to do?</h3>
-                    <button id="newgame" onclick="newGame()">New Game</button>
-                    <button id="stats">Statistics</button>
-                    <p id="copyright">Copyright © Jim Olesen 2022</p>`;
+    clear();
+    newGame();
 }
 
 /**
@@ -32,16 +25,13 @@ function handleSubmit() {
  * Puts eventlisteners on buttons and sets the innerHTML defined as category
  */
 function newGame() {
-
-    while (game.hasChildNodes()) {
-        game.removeChild(game.firstChild);
-    }
-
+    rightArr.splice(0, rightArr.length);
+    clear();
     game.innerHTML = `<h2>Pick a category</h2>
                         <div>
                             <button>Geography</button> 
                             <button>Science</button> 
-                            <button>Sports</button>
+                            <button onclick="nope()">Sports</button>
                         </div>
                         <p id="copyright">Copyright © Jim Olesen 2022</p>`;
     
@@ -67,7 +57,7 @@ function select(category) {
 
 /**
  * Clears screen,
- * Generates difficulty buttons with innerHTML being difficulty choice parameter in an array
+ * Generates difficulty buttons with innerHTML being difficulty choice stored as parameter in an array
  */
 function selectDifficulty() {
 
@@ -109,7 +99,6 @@ function sortGame(difficulty) {
     }
     runGame();
 }
-
 
 /**
  * Clears screen,
@@ -158,25 +147,53 @@ function check(answer) {
     let correct = document.querySelector('.correct');
     correct.classList.add("green");
     console.log(correct);
+
     if (answer === sessionQuestions[0].answer) {
         rightArr.push(sessionQuestions[0]);
-        alert("Correct, Well done!");
     }
     sessionQuestions.shift(); 
 
     if (sessionQuestions.length === 0) {
-        while (game.hasChildNodes()) {
-            game.removeChild(game.firstChild);
-        }
-        sessionGames ++;
+        setTimeout(clear, 2000);
+        setTimeout(endGame, 2100);
+    } else {
+        setTimeout(runGame, 2000);
+    }
+}
+
+/**
+ * Clears screen
+ */
+function clear() {
+    while (game.hasChildNodes()) {
+        game.removeChild(game.firstChild);
+    }
+}
+
+/**
+ * Ends the game,
+ * increases sessionGames array with 1
+ * displays some HTML
+ */
+function endGame() {
+    sessionGames ++;
+    sessionCorrect += rightArr.length;
         game.innerHTML = `<h2>End of Round</h2> 
                           <h3>You got ${rightArr.length}/3</h3>
-                          <button id="newgame" onclick="newGame()">New Game</button>
-                          <button id="stats">Statistics</button>
+                          <button id="newgame" onclick="newGame()">Play Again</button>
+                          <button id="stats" onclick="stats()">Statistics</button>
                           <p id="copyright">Copyright © Jim Olesen 2022</p>`;
-    } else {
-        setTimeout(runGame, 1500);
-    }
+}
+
+/**
+ * Displays % of how many questions youve answered correctly
+ */
+ function stats() {
+    clear();
+    let percentage = sessionCorrect / (sessionGames * 3) * 100;
+    let round = percentage.toFixed(2);
+    game.innerHTML = `<h2>Statistics</h2>
+                      <h3>You have answered ${round} this session!</h3>`;
 }
 
 // Array of question objects

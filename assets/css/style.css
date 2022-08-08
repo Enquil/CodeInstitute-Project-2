@@ -72,8 +72,9 @@ p {
 }
 
 #copyright {
-    position: relative;
-    bottom: -100px;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
 }
 
 
@@ -96,12 +97,8 @@ p {
     width: 50%;
 }
 
-.green {
+.green, .green:hover {
     background-color: #00FF00;;
-}
-
-.green:hover {
-    background-color: #00FF00;
 }
 
 .red {
@@ -110,6 +107,10 @@ p {
 
 .text-center {
     text-align: center;
+}
+
+h1, h2, h3 {
+    text-shadow: 2px 2px #000000;
 }
 
 @media only screen and (max-width: 800px) {
@@ -121,3 +122,5 @@ p {
         padding: 1rem;
     }
   }
+
+

@@ -7,7 +7,7 @@ You can select a username as well and view statistics for the current session, i
 
 * [Technologies used]
 * [Pages and Features]
-* [User Experience]
+* [User Experience and Design]
 * [Accessibility]
 * [Testing]
 * [Deployment]
@@ -44,13 +44,14 @@ Wanted to do some json and store users and questions with MongoDB, this might st
 ---
 
 ### Overarching Design
-  * One "window"(main div) contains everything, text is generated with JavaScript.
-  * As simple as possible to start playing, pick a username, a category, a difficulty and you're off.
+  * One "window"(main div) contains everything, text is generated with JavaScript, kept everything very center and minimal.
+  * As simple as possible to start playing, pick username, category, difficulty and you're off.
   * Statistics for current session
 
-### Colours
+#### Colours
   * Background is Liberty #6457A6
   * Text is White #FFFFFF
   * Button background is #0C1713
   * On hover, button background will turn to #42BFDD and the text will become black #000000
 
+###

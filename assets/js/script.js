@@ -22,7 +22,8 @@ function handleSubmit() {
     game.innerHTML = `<h2>Welcome ${user}</h2><br> 
                     <h3>What would you like to do?</h3>
                     <button id="newgame" class="fifty" onclick="newGame()">New Game</button>
-                    <button id="stats" class="fifty">Statistics</button>`;
+                    <button id="stats" class="fifty">Statistics</button>
+                    <p id="copyright">Copyright © Jim Olesen 2022</p>`;
 }
 
 /**
@@ -41,7 +42,8 @@ function newGame() {
                             <button>Geography</button> 
                             <button>Science</button> 
                             <button>Sports</button>
-                        </div>`;
+                        </div>
+                        <p id="copyright">Copyright © Jim Olesen 2022</p>`;
     
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -78,7 +80,8 @@ function selectDifficulty() {
                             <button>Easy</button> 
                             <button>Medium</button> 
                             <button>Hard</button>
-                        </div>`;
+                        </div>
+                        <p id="copyright">Copyright © Jim Olesen 2022</p>`;
 
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -127,11 +130,13 @@ function runGame() {
                             <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[1]}</button> 
                             <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[2]}</button>
                             <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[3]}</button>
-                        </div>`;
+                        </div>
+                        <p id="copyright">Copyright © Jim Olesen 2022</p>`;
 
     let buttonArr = document.getElementById("answerbox").children;
     let rightAnswer = Array.from(buttonArr).sort(() => Math.random() - 0.5);
     rightAnswer[0].innerText =  sessionQuestions[0].answer;
+    rightAnswer[0].classList.add("correct");
     let buttons = document.getElementsByTagName("button");
     
     for (let button of buttons) {
@@ -150,11 +155,10 @@ function runGame() {
  * @param {*} answer is whatever answer the user chooses
  */
 function check(answer) {
-
+    
     if (answer === sessionQuestions[0].answer) {
         rightArr.push(sessionQuestions[0]);
     }
-
     sessionQuestions.shift(); 
 
     if (sessionQuestions.length === 0) {
@@ -165,7 +169,8 @@ function check(answer) {
         game.innerHTML = `<h2>End of Round</h2> 
                           <h3>You got ${rightArr.length}/3</h3>
                           <button id="newgame" class="fifty" onclick="newGame()">New Game</button>
-                          <button id="stats" class="fifty">Statistics</button>`;
+                          <button id="stats" class="fifty">Statistics</button>
+                          <p id="copyright">Copyright © Jim Olesen 2022</p>`;
     } else {
         setTimeout(runGame, 2000);
     }

@@ -2,6 +2,7 @@
 
 body, html {
     margin: 0;
+    text-align: center;
 }
 
 a {
@@ -23,19 +24,6 @@ button {
 button:hover {
     background-color: #42BFDD;
     color: #000000;
-}
-
-footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #0C1713;
-    padding: 20px;
-}
-
-footer > p {
-    position: relative;
 }
 
 form {
@@ -82,12 +70,9 @@ p {
 }
 
 #copyright {
-    padding-left: 70%;
+    margin-top: 10%;
 }
 
-#external-links {
-    padding-left: 4%;
-}
 
 /*--- CLASSES ---*/
 
@@ -108,13 +93,17 @@ p {
     width: 50%;
 }
 
+.red {
+    background-color: red;
+}
+
 .text-center {
     text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
     h1, h2 {
-      padding-top: 25vh;
+      padding-top: 20vh;
       font-size: 5rem;
     }
   }

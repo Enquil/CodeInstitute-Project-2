@@ -21,8 +21,8 @@ function handleSubmit() {
     
     game.innerHTML = `<h2>Welcome ${user}</h2><br> 
                     <h3>What would you like to do?</h3>
-                    <button id="newgame" class="fifty" onclick="newGame()">New Game</button>
-                    <button id="stats" class="fifty">Statistics</button>
+                    <button id="newgame" onclick="newGame()">New Game</button>
+                    <button id="stats">Statistics</button>
                     <p id="copyright">Copyright © Jim Olesen 2022</p>`;
 }
 
@@ -126,10 +126,10 @@ function runGame() {
 
     game.innerHTML = `<h2>${sessionQuestions[0].question}</h2>
                         <div id="answerbox">
-                            <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[0]}</button> 
-                            <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[1]}</button> 
-                            <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[2]}</button>
-                            <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[3]}</button>
+                            <button onclick="check(answer)">${sessionQuestions[0].wrong[0]}</button> 
+                            <button onclick="check(answer)">${sessionQuestions[0].wrong[1]}</button> 
+                            <button onclick="check(answer)">${sessionQuestions[0].wrong[2]}</button>
+                            <button onclick="check(answer)">${sessionQuestions[0].wrong[3]}</button>
                         </div>
                         <p id="copyright">Copyright © Jim Olesen 2022</p>`;
 
@@ -155,9 +155,12 @@ function runGame() {
  * @param {*} answer is whatever answer the user chooses
  */
 function check(answer) {
-    
+    let correct = document.querySelector('.correct');
+    correct.classList.add("green");
+    console.log(correct);
     if (answer === sessionQuestions[0].answer) {
         rightArr.push(sessionQuestions[0]);
+        alert("Correct, Well done!");
     }
     sessionQuestions.shift(); 
 
@@ -168,11 +171,11 @@ function check(answer) {
         sessionGames ++;
         game.innerHTML = `<h2>End of Round</h2> 
                           <h3>You got ${rightArr.length}/3</h3>
-                          <button id="newgame" class="fifty" onclick="newGame()">New Game</button>
-                          <button id="stats" class="fifty">Statistics</button>
+                          <button id="newgame" onclick="newGame()">New Game</button>
+                          <button id="stats">Statistics</button>
                           <p id="copyright">Copyright © Jim Olesen 2022</p>`;
     } else {
-        setTimeout(runGame, 2000);
+        setTimeout(runGame, 1500);
     }
 }
 
@@ -211,7 +214,7 @@ questions = [
 
     {
         id: 7, category: "Geography", difficulty: "Easy",
-        question: "What is the tallest mountain on Earth?", answer: "Mt. Everest", wrong: ["Mt. Chimborazo", "K2", "Mt. Blanc", "Mt. Kangchenjunga", "Mt. Kebnekaise"]
+        question: "What is the tallest mountain on Earth?", answer: "Mount Everest", wrong: ["Chimborazo", "K2", "Mount Blanc", "Kangchenjunga", "Kebnekaise"]
     },
 
     {

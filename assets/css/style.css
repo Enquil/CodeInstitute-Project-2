@@ -3,6 +3,7 @@
 body, html {
     margin: 0;
     text-align: center;
+    background-color: #6457A6;
 }
 
 a {
@@ -34,6 +35,7 @@ h1, h2, h3 {
     color: #FFFFFF;
     margin-top: 0;
     margin-bottom: 1rem;
+    font-family: 'Mouse Memoirs', sans-serif;
 }
 
 h1, h2 {
@@ -70,7 +72,8 @@ p {
 }
 
 #copyright {
-    margin-top: 10%;
+    position: relative;
+    bottom: -100px;
 }
 
 
@@ -93,6 +96,14 @@ p {
     width: 50%;
 }
 
+.green {
+    background-color: #00FF00;;
+}
+
+.green:hover {
+    background-color: #00FF00;
+}
+
 .red {
     background-color: red;
 }
@@ -101,9 +112,12 @@ p {
     text-align: center;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+    button {
+        width: 80%;
+    }
+
     h1, h2 {
-      padding-top: 20vh;
-      font-size: 5rem;
+        padding: 1rem;
     }
   }

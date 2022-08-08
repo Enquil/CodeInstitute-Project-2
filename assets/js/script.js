@@ -21,11 +21,8 @@ function handleSubmit() {
     
     game.innerHTML = `<h2>Welcome ${user}</h2><br> 
                     <h3>What would you like to do?</h3>
-                    
-                    <div class="block">
-                            <button id="newgame" class="fifty" onclick="newGame()">New Game</button>
-                    </div> 
-                        <button id="stats" class="fifty">Statistics</button>`;
+                    <button id="newgame" class="fifty" onclick="newGame()">New Game</button>
+                    <button id="stats" class="fifty">Statistics</button>`;
 }
 
 /**
@@ -170,7 +167,7 @@ function check(answer) {
                           <button id="newgame" class="fifty" onclick="newGame()">New Game</button>
                           <button id="stats" class="fifty">Statistics</button>`;
     } else {
-        runGame();
+        setTimeout(runGame, 2000);
     }
 }
 

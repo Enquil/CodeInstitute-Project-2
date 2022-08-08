@@ -1,43 +1,46 @@
 form = document.forms[0];
 form.addEventListener("submit", handleSubmit);
 let sessionQuestions = [];
-let numb = [];
-// get username and store it as a var, replace stuff 
+let buttonArr = [];
+let rightArr = [];
+let sessionGames = 0;
+let sessionCorrect = 0;
+/**
+ * Gets the username from the input,
+ * Clears all text content,
+ * Greeting with username and navigation buttons
+ */
 function handleSubmit() {
     event.preventDefault();
 
     let user = document.getElementById("username").value;
 
-    const top = document.getElementById("top");
-    const middle = document.getElementById("middle");
-    const bottom = document.getElementById("bottom");
-
-    while (middle.hasChildNodes()) {
-        top.removeChild(top.firstChild);
-        middle.removeChild(middle.firstChild);
-        bottom.removeChild(bottom.firstChild);
+    while (game.hasChildNodes()) {
+        game.removeChild(game.firstChild);
     }
     
-    top.innerHTML = `<h2>Welcome ${user}</h2><br> <h3>What would you like to do?</h3>`;
-    middle.innerHTML = `<div class="block">
-                            <button id="newgame" onclick="newGame()">New Game</button>
-                        </div> 
-                        <button id="stats">Statistics</button>`;
+    game.innerHTML = `<h2>Welcome ${user}</h2><br> 
+                    <h3>What would you like to do?</h3>
+                    
+                    <div class="block">
+                            <button id="newgame" class="fifty" onclick="newGame()">New Game</button>
+                    </div> 
+                        <button id="stats" class="fifty">Statistics</button>`;
 }
 
-
-
+/**
+ * Clears screen,
+ * Generates category choice,
+ * Puts eventlisteners on buttons and sets the innerHTML defined as category
+ */
 function newGame() {
-    let top = document.getElementById("top");
-    let middle = document.getElementById("middle");
 
-    while (middle.hasChildNodes()) {
-        top.removeChild(top.firstChild);
-        middle.removeChild(middle.firstChild);
+    while (game.hasChildNodes()) {
+        game.removeChild(game.firstChild);
     }
 
-    top.innerHTML = `<h2>Pick a category</h2>`;
-    middle.innerHTML = `<div>
+    game.innerHTML = `<h2>Pick a category</h2>
+                        <div>
                             <button>Geography</button> 
                             <button>Science</button> 
                             <button>Sports</button>
@@ -52,6 +55,10 @@ function newGame() {
     }   
 }
 
+/**
+ * filters question list by category and returns them as an array of objects
+ * @param {*} category is innerHTML of categorybuttons
+ */
 function select(category) {
     categoryArr = questions.filter(question => {
         return question.category === category;
@@ -59,16 +66,18 @@ function select(category) {
     selectDifficulty();
 }
 
+/**
+ * Clears screen,
+ * Generates difficulty buttons with innerHTML being difficulty choice parameter in an array
+ */
 function selectDifficulty() {
-    let top = document.getElementById("top");
-    let middle = document.getElementById("middle");
-    while (middle.hasChildNodes()) {
-        top.removeChild(top.firstChild);
-        middle.removeChild(middle.firstChild);
+
+    while (game.hasChildNodes()) {
+        game.removeChild(game.firstChild);
     }
 
-    top.innerHTML = `<h2>Select a difficulty</h2>`;
-    middle.innerHTML = `<div>
+    game.innerHTML = `<h2>Select a difficulty</h2>
+                        <div>
                             <button>Easy</button> 
                             <button>Medium</button> 
                             <button>Hard</button>
@@ -83,6 +92,11 @@ function selectDifficulty() {
 }
 }
 
+/**
+ * Filters array of categories by selected difficulty
+ * Sorts the array randomly and puts the 3 first questions into the final questionArr
+ * @param {*} difficulty is innerHTML of difficulty buttons 
+ */
 function sortGame(difficulty) {
     questionArr = categoryArr.filter(question => {
         return question.difficulty === difficulty;
@@ -93,31 +107,36 @@ function sortGame(difficulty) {
         sessionQuestions.push(questionArr[0]);
         questionArr.shift();
     }
-    console.log(sessionQuestions);
     runGame();
 }
 
-function runGame() {
-    let top = document.getElementById("top");
-    let middle = document.getElementById("middle");
 
-    while (middle.hasChildNodes()) {
-        top.removeChild(top.firstChild);
-        middle.removeChild(middle.firstChild);
+/**
+ * Clears screen,
+ * Randomizes the wrong answers possible for index 0 of sessionQuestions and generates buttontexts based on new index,
+ * Gets the buttons into an array, randomizes them and puts the correct answer at index 0
+ */
+function runGame() {
+
+    while (game.hasChildNodes()) {
+        game.removeChild(game.firstChild);
     }
 
-    questionArr[0].wrong.sort(() => Math.random() - 0.5);
-    top.innerHTML = `<h2>${questionArr[0].question}</h2>`;
-    middle.innerHTML = `<div id="answerbox">
+    sessionQuestions[0].wrong.sort(() => Math.random() - 0.5);
+
+    game.innerHTML = `<h2>${sessionQuestions[0].question}</h2>
+                        <div id="answerbox">
                             <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[0]}</button> 
                             <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[1]}</button> 
                             <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[2]}</button>
                             <button class="fortyfive" onclick="check(answer)">${sessionQuestions[0].wrong[3]}</button>
                         </div>`;
-    let numb = (document.getElementById("answerbox").children);
-    numb[0].innerText =  sessionQuestions[0].answer;
-    let buttons = document.getElementsByTagName("button");
 
+    let buttonArr = document.getElementById("answerbox").children;
+    let rightAnswer = Array.from(buttonArr).sort(() => Math.random() - 0.5);
+    rightAnswer[0].innerText =  sessionQuestions[0].answer;
+    let buttons = document.getElementsByTagName("button");
+    
     for (let button of buttons) {
         button.addEventListener("click", function() {
             let answer = this.innerHTML;
@@ -126,20 +145,36 @@ function runGame() {
 } 
 }
 
+/**
+ * Checks user answer against right answer for first question in sessionQuestions,
+ * If user is right, pushes question to new array called rightArr,
+ * The length of rightArr is number of correct answers,
+ * When sessionQuestions array length is 0, the game ends and results are loaded
+ * @param {*} answer is whatever answer the user chooses
+ */
 function check(answer) {
+
     if (answer === sessionQuestions[0].answer) {
-    alert("correct");
-    } else {
-        alert("wrong");
+        rightArr.push(sessionQuestions[0]);
     }
-    sessionQuestions.shift();
+
+    sessionQuestions.shift(); 
+
     if (sessionQuestions.length === 0) {
-        alert("done");
+        while (game.hasChildNodes()) {
+            game.removeChild(game.firstChild);
+        }
+        sessionGames ++;
+        game.innerHTML = `<h2>End of Round</h2> 
+                          <h3>You got ${rightArr.length}/3</h3>
+                          <button id="newgame" class="fifty" onclick="newGame()">New Game</button>
+                          <button id="stats" class="fifty">Statistics</button>`;
     } else {
         runGame();
     }
 }
 
+// Array of question objects
 questions = [
     {
         id: 1, category: "Geography", difficulty: "Easy",
@@ -157,13 +192,13 @@ questions = [
     },
 
     {
-        id: 4, category: "Geography", difficulty: "Hard",
+        id: 4, category: "Geography", difficulty: "Medium",
         question: "What percentage of the worlds population lives in the northern hemisphere?", answer: "90%", wrong: ["80%", "85%", "75%", "70%", "87%", "82%"]
     },
 
     {
-        id: 5, category: "Geography", difficulty: "Medium",
-        question: "How many timezones does Russia span?", answer: "11", wrong: ["10", "9", "8", "7", "6"]
+        id: 5, category: "Geography", difficulty: "Easy",
+        question: "How many timezones does Russia span?", answer: "11", wrong: ["2", "5", "8", "7", "3"]
     },
 
     {
@@ -297,18 +332,58 @@ questions = [
     },
 
     {
-        id: 31, category: "Science", difficulty: "Hard",
+        id: 32, category: "Science", difficulty: "Hard",
     },
 
     {
-        id: 31, category: "Science", difficulty: "Hard",
+        id: 33, category: "Science", difficulty: "Hard",
     },
 
     {
-        id: 31, category: "Science", difficulty: "Hard",
+        id: 34, category: "Science", difficulty: "Hard",
     },
 
     {
-        id: 31, category: "Science", difficulty: "Hard",
+        id: 35, category: "Science", difficulty: "Hard",
+    },
+
+    {
+        id: 36, category: "Geography", difficulty: "Hard",
+    },
+
+    {
+        id: 37, category: "Geography", difficulty: "Hard",
+    },
+
+    {
+        id: 38, category: "Geography", difficulty: "Hard",
+    },
+
+    {
+        id: 39, category: "Geography", difficulty: "Hard",
+    },
+
+    {
+        id: 40, category: "Geography", difficulty: "Hard",
+    },
+
+    {
+        id: 41, category: "Sports", difficulty: "Hard",
+    },
+
+    {
+        id: 42, category: "Sports", difficulty: "Hard",
+    },
+
+    {
+        id: 43, category: "Sports", difficulty: "Hard",
+    },
+
+    {
+        id: 44, category: "Sports", difficulty: "Hard",
+    },
+
+    {
+        id: 45, category: "Sports", difficulty: "Hard",
     },
 ];

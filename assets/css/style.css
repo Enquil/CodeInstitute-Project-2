@@ -14,7 +14,7 @@ button {
     font-size: 2.5rem;
     padding: 1rem;
     width: 25%;
-    border: 1px solid gray;
+    border: 2px ridge gray;
     background-color: #0C1713;
     color: #FFFFFF;
     margin: 1rem;
@@ -24,16 +24,35 @@ button:hover {
     background-color: #42BFDD;
 }
 
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0C1713;
+    padding: 20px;
+}
 
-h1, h2 {
-    color: #FFFFFF;
-    font-size: 4rem;
-    margin-top: 0;
+footer > p {
+    position: relative;
+}
+
+form {
     padding-top: 3rem;
+}
+
+h1, h2, h3 {
+    color: #FFFFFF;
+    margin-top: 0;
     margin-bottom: 1rem;
 }
 
-h2 {
+h1, h2 {
+    font-size: 4rem;
+    padding-top: 3rem;
+}
+
+h3 {
     font-size: 3rem;
 }
 
@@ -43,12 +62,12 @@ input {
 }
 
 label {
-    color: whitesmoke;
+    color: #FFFFFF;
     font-size: 2.5rem;
 }
 
 p {
-    color: whitesmoke;
+    color: #FFFFFF;
     font-size: 1.5rem;
 }
 
@@ -61,19 +80,10 @@ p {
     background-color: #6457A6;
 }
 
-#middle {
-    margin: 4rem;
-}
-
-
 /*--- CLASSES ---*/
 
 .block {
     display: block;
-}
-
-.text-center {
-    text-align: center;
 }
 
 .fortyfive {
@@ -81,8 +91,20 @@ p {
     height: 15%;
 }
 
+.inline {
+    display: inline;
+}
+
+.fifty {
+    width: 50%;
+}
+
+.text-center {
+    text-align: center;
+}
+
 @media only screen and (max-width: 1000px) {
-    h1 {
+    h1, h2 {
       padding-top: 30%;
     }
   }

@@ -81,6 +81,14 @@ p {
     background-color: #6457A6;
 }
 
+#copyright {
+    padding-left: 70%;
+}
+
+#external-links {
+    padding-left: 4%;
+}
+
 /*--- CLASSES ---*/
 
 .block {
@@ -106,6 +114,7 @@ p {
 
 @media only screen and (max-width: 1000px) {
     h1, h2 {
-      padding-top: 30%;
+      padding-top: 25vh;
+      font-size: 5rem;
     }
   }

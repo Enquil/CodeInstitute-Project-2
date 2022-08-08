@@ -46,12 +46,16 @@ Wanted to do some json and store users and questions with MongoDB, this might st
 ### Overarching Design
   * One "window"(main div) contains everything, text is generated with JavaScript, kept everything very center and minimal.
   * As simple as possible to start playing, pick username, category, difficulty and you're off.
-  * Statistics for current session
+  * Statistics for current session shows a percentage of the questions you got right.
 
 #### Colours
+  * Used https://coolors.co to spawn a nice theme throughout the page, tried to make it sort of trivial pursuit but not really.
   * Background is Liberty #6457A6
   * Text is White #FFFFFF
   * Button background is #0C1713
   * On hover, button background will turn to #42BFDD and the text will become black #000000
 
-###
+### User Experience
+  * Tried to make it a bit into an actual game menu a la AAA, because they are usually straightforward and very user friendly.
+  * Didnt change any color schemes in between "pages", it gives some continuity.
+  * Buttons changes color on hover for some interactivity, Right answer is also lit up in green.

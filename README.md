@@ -44,5 +44,8 @@ This is a quiz game in a trivia-style setting, It produces 5 random questions fo
   * Statistics for current session
 
 * Colours
-  * Went with navy because i like the t
+  * Background is Liberty #6457A6
+  * Text is White #FFFFFF
+  * Button background is #0C1713
+  * On hover, button background will turn to #42BFDD and the text will become black #000000
 

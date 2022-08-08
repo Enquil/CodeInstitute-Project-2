@@ -38,12 +38,12 @@ This is a quiz game in a trivia-style setting, It produces 5 random questions fo
 ## User Experience and Design
 ---
 
-* Overarching Design
+### Overarching Design
   * One "window"(main div) contains everything, text is generated with JavaScript.
   * As simple as possible to start playing, pick a username, a category, a difficulty and you're off.
   * Statistics for current session
 
-* Colours
+### Colours
   * Background is Liberty #6457A6
   * Text is White #FFFFFF
   * Button background is #0C1713

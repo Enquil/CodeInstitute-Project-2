@@ -32,8 +32,7 @@ function newGame() {
                             <button>Geography</button> 
                             <button>Science</button> 
                             <button onclick="nope()">Sports</button>
-                        </div>
-                        <p id="copyright">Copyright © Jim Olesen 2022</p>`;
+                        </div>`;
     
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -70,8 +69,7 @@ function selectDifficulty() {
                             <button>Easy</button> 
                             <button>Medium</button> 
                             <button>Hard</button>
-                        </div>
-                        <p id="copyright">Copyright © Jim Olesen 2022</p>`;
+                        </div>`;
 
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -119,8 +117,7 @@ function runGame() {
                             <button onclick="check(answer)">${sessionQuestions[0].wrong[1]}</button> 
                             <button onclick="check(answer)">${sessionQuestions[0].wrong[2]}</button>
                             <button onclick="check(answer)">${sessionQuestions[0].wrong[3]}</button>
-                        </div>
-                        <p id="copyright">Copyright © Jim Olesen 2022</p>`;
+                        </div>`;
 
     let buttonArr = document.getElementById("answerbox").children;
     let rightAnswer = Array.from(buttonArr).sort(() => Math.random() - 0.5);
@@ -179,10 +176,9 @@ function endGame() {
     sessionGames ++;
     sessionCorrect += rightArr.length;
         game.innerHTML = `<h2>End of Round</h2> 
-                          <h3>You got ${rightArr.length}/3</h3>
+                          <h3>You got ${rightArr.length}/3 questions right!</h3>
                           <button id="newgame" onclick="newGame()">Play Again</button>
-                          <button id="stats" onclick="stats()">Statistics</button>
-                          <p id="copyright">Copyright © Jim Olesen 2022</p>`;
+                          <button id="stats" onclick="stats()">Statistics</button>`;
 }
 
 /**
@@ -193,7 +189,7 @@ function endGame() {
     let percentage = sessionCorrect / (sessionGames * 3) * 100;
     let round = percentage.toFixed(2);
     game.innerHTML = `<h2>Statistics</h2>
-                      <h3>You have answered ${round} this session!</h3>`;
+                      <h3>You have answered ${round}% of questions correct, this session!</h3>`;
 }
 
 // Array of question objects

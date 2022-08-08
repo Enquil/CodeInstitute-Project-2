@@ -1,6 +1,7 @@
 # Project2
 
-This is a quiz game in a trivia-style setting, It produces 5 random questions for the user to answer, keeps track of score.
+This is a quiz game that is supposed to have sort of a "trivial pursuit feel", it will give you 3 questions at random based on what category and difficulty you select.
+You can select a username as well and view statistics for the current session, it does not save any data however so every session is destroyed on page exit or refresh.
 
 ## Content
 

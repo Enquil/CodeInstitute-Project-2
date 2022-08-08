@@ -5,30 +5,34 @@ let buttonArr = [];
 let rightArr = [];
 let sessionGames = 0;
 let sessionCorrect = 0;
-
 /**
  * Gets the username from the input,
  * Clears all text content,
- * Greeting with username and navigation buttons
+ * Sens you straight into category choice
  */
 function handleSubmit() {
     event.preventDefault();
 
     let user = document.getElementById("username").value;
     clear();
-    newGame();
+    newGame(user);
 }
 
 /**
  * Clears screen,
  * Generates category choice,
  * Puts eventlisteners on buttons and sets the innerHTML defined as category
+ * if first time picking category, greets with username
  */
-function newGame() {
+function newGame(user) {
     rightArr.splice(0, rightArr.length);
     clear();
-    game.innerHTML = `<h2>Pick a category</h2>
-                        <div>
+    if (sessionGames === 0) {
+    game.innerHTML = `<h2>Welcome ${user}</h2>
+                      <h3>Please pick a category</h3>`;
+    } else { game.innerHTML = `<h3>Please pick a category</h3>`;
+}
+    game.innerHTML += `<div>
                             <button>Geography</button> 
                             <button>Science</button> 
                             <button onclick="nope()">Sports</button>
@@ -113,10 +117,10 @@ function runGame() {
 
     game.innerHTML = `<h2>${sessionQuestions[0].question}</h2>
                         <div id="answerbox">
-                            <button onclick="check(answer)">${sessionQuestions[0].wrong[0]}</button> 
-                            <button onclick="check(answer)">${sessionQuestions[0].wrong[1]}</button> 
-                            <button onclick="check(answer)">${sessionQuestions[0].wrong[2]}</button>
-                            <button onclick="check(answer)">${sessionQuestions[0].wrong[3]}</button>
+                            <button>${sessionQuestions[0].wrong[0]}</button> 
+                            <button>${sessionQuestions[0].wrong[1]}</button> 
+                            <button>${sessionQuestions[0].wrong[2]}</button>
+                            <button>${sessionQuestions[0].wrong[3]}</button>
                         </div>`;
 
     let buttonArr = document.getElementById("answerbox").children;
@@ -134,14 +138,14 @@ function runGame() {
 }
 
 /**
- * Checks user answer against right answer for first question in sessionQuestions,
+ * Checks user answer against correct answer for first question in sessionQuestions array,
  * If user is right, pushes question to new array called rightArr,
  * The length of rightArr is number of correct answers,
  * When sessionQuestions array length is 0, the game ends and results are loaded
  * @param {*} answer is whatever answer the user chooses
  */
 function check(answer) {
-    let correct = document.querySelector('.correct');
+    let correct = document.querySelector(".correct");
     correct.classList.add("green");
     console.log(correct);
 
@@ -169,7 +173,7 @@ function clear() {
 
 /**
  * Ends the game,
- * increases sessionGames array with 1
+ * increases sessionGames array with 1 for calculating % correct,
  * displays some HTML
  */
 function endGame() {
@@ -183,11 +187,12 @@ function endGame() {
 
 /**
  * Displays % of how many questions youve answered correctly
+ * Displays some html
  */
  function stats() {
     clear();
     let percentage = sessionCorrect / (sessionGames * 3) * 100;
-    let round = percentage.toFixed(2);
+    let round = percentage.toFixed(1);
     game.innerHTML = `<h2>Statistics</h2>
                       <h3>You have answered ${round}% of questions correct, this session!</h3>`;
 }

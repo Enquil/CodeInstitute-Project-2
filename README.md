@@ -59,3 +59,16 @@ Wanted to do some json and store users and questions with MongoDB, this might st
   * Tried to make it a bit into an actual game menu a la AAA, because they are usually straightforward and very user friendly.
   * Didnt change any color schemes in between "pages", it gives some continuity.
   * Buttons changes color on hover for some interactivity, Right answer is also lit up in green.
+
+
+## Accessibility
+---
+
+Becuse im using JavaScript for basically all the HTML, i chose buttons instead of links because they acted very weird and declaring a "href" did not mix well with using JavaScript to generate the HTMl, this is most likely because im not experienced with how these interactions work.
+No Aria-labels, i wanted to put them in at first but, because of how they are supposed to be used, i chose against it.
+
+
+## Testing
+---
+
+Lighthouse score

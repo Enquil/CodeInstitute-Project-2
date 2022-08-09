@@ -5,6 +5,8 @@ let buttonArr = [];
 let rightArr = [];
 let sessionGames = 0;
 let sessionCorrect = 0;
+let user = "";
+
 /**
  * Gets the username from the input,
  * Clears all text content,
@@ -13,7 +15,7 @@ let sessionCorrect = 0;
 function handleSubmit() {
     event.preventDefault();
 
-    let user = document.getElementById("username").value;
+    user = document.getElementById("username").value;
     clear();
     newGame(user);
 }
@@ -147,7 +149,6 @@ function runGame() {
 function check(answer) {
     let correct = document.querySelector(".correct");
     correct.classList.add("green");
-    console.log(correct);
 
     if (answer === sessionQuestions[0].answer) {
         rightArr.push(sessionQuestions[0]);
@@ -301,53 +302,53 @@ questions = [
     },
 
     {
-        id: 21,
-        category: "Sports"
+        id: 21, category: "Sports", difficulty: "Easy",
+        question: "Who is the all time greatest goalscorer in the NHL?", answer: "Wayne Gretzky", wrong: ["Gordie Howe", "Alex Ovechkin", "Sidney Crosby", "Jaromir Jagr"]
     },
 
     {
-        id: 22,
-        category: "Sports"
+        id: 22, category: "Sports", difficulty: "Easy",
+        question: "Which football player has won the Ballon d'or the most times?", answer: "Lionel Messi", wrong: ["Christiano Ronaldo", "Michel PLatini", "Johan Cruyff", "Marco Van Basten", "Ronaldo"]
     },
 
     {
-        id: 23,
-        category: "Sports"
+        id: 23, category: "Sports", difficulty: "Easy",
+        question: "How long is a football game usually?", answer: "90 Minutes", wrong: ["60 Minutes", "45 Minutes", "80 Minutes", "75 Minutes", "30 Minutes"]
     },
 
     {
-        id: 24,
-        category: "Sports"
+        id: 24, category: "Sports", difficulty: "Easy",
+        question: "In basketball, what is the most amount of points one can score in one throw?", answer: "3 Points", wrong: ["1 Point", "2 Points", "4 Points", "5 Points", "6 Points"]
     },
 
     {
-        id: 25,
-        category: "Sports"
+        id: 25, category: "Sports", difficulty: "Easy",
+        question: "What country invented Rugby?", answer: "England", wrong: ["Ireland", "Australia", "France", "Scotland", "Argentina"]
     },
 
     {
-        id: 26,
-        category: "Sports"
+        id: 26, category: "Sports", difficulty: "Medium",
+        question: "In Hockey, how many outfield players are there usually on the ice?", answer: "10", wrong: ["5", "12", "8", "6", "9"]
     },
 
     {
-        id: 27,
-        category: "Sports"
+        id: 27, category: "Sports", difficulty: "Medium",
+        question: "What is the record for longest cricket game ever?", answer: "9 days", wrong: ["36 hours", "7 days", "11 hours", "2 weeks", "2 days"]
     },
 
     {
-        id: 28,
-        category: "Sports"
+        id: 28, category: "Sports", difficulty: "Medium",
+        question: "What color is the third olympic ring?", answer: "red", wrong: ["Black", "Blue", "Yellow", "Green", "Magenta"]
     },
 
     {
-        id: 29,
-        category: "Sports"
+        id: 29, category: "Sports", difficulty: "Medium",
+        question: "What country has won the world cup in football 5 times?", answer: "Brazil", wrong: ["France", "Italy", "Argentina", "Spain", "Germany"]
     },
 
     {
-        id: 30,
-        category: "Sports"
+        id: 30, category: "Sports", difficulty: "Medium",
+        question: "Who won the Premier League the season of 2015/2016?", answer: "Leicester City", wrong: ["Manchester City", "Liverpool", "Chelsea", "Arsenal", "Tottenham"]
     },
 
     {

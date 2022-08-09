@@ -120,7 +120,7 @@ https://validator.w3.org/nu/?doc=https%3A%2F%2Fenquil.github.io%2FProject2%2F
 
 ### Thanks to AnnaGreaves@CodeInstitute for the function mentioned in Testing
 ### Thanks to AnthonyUgwu@CodeInstitute for a lot of good advice.
-### Thank you to MountianCharlie@github for the README.md structure. 
+### Thank you to MountianCharlie@github for the general README.md structure. 
 
 ## Site Expansion 
 ---

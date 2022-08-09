@@ -64,11 +64,16 @@ Wanted to do some json and store users and questions with MongoDB, this might st
 ## Accessibility
 ---
 
-Becuse im using JavaScript for basically all the HTML, i chose buttons instead of links because they acted very weird and declaring a "href" did not mix well with using JavaScript to generate the HTMl, this is most likely because im not experienced with how these interactions work.
-No Aria-labels, i wanted to put them in at first but, because of how they are supposed to be used, i chose against it.
+Becuse im using JavaScript for basically all the HTML, i chose buttons instead of links because they acted very weird and declaring a href did not mix well with using JavaScript to generate the HTMl, this is most likely because im not experienced with how these interactions work.
+
+No Aria-labels, i started to put them in at first but, because of how they are supposed to be used, i chose against it, got a lot of complaints 
+
 
 
 ## Testing
 ---
 
-Lighthouse score
+### Lighthouse score
+
+### W3C validator result 
+https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fenquil.github.io%2FProject2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en

@@ -40,7 +40,7 @@ function newGame(user) {
                             <button onclick="nope()">Sports</button>
                         </div>`;
     
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByTagName("button"); // Anna Greaves Code Institute
     for (let button of buttons) {
         button.addEventListener("click", function() {
             let category = this.innerHTML;

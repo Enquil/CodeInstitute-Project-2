@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name = "author" content = "Jim Olesen">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,7 +14,9 @@
     </style>
 </head>
 <body>
+    <!--### Main ###-->
     <div id="main">
+        <!--### Game, all JavaScript is generated into this ###-->
         <div id="game" class="text-center">
             <h1>
                 Quiztoffer
@@ -22,12 +24,13 @@
             <p>
                 A quizgame by Jim Olesen
             </p>
-    
+             <!--### Form for username ###-->
             <form id="userdata" name="userdata" method="post" action="script.js">
                 <label for="username" class="block">Enter a Username</label>
-                <input id="username" name="username" type="text" required> <br>
+                <input id="username" name="username" type="text" maxlength="15" required> <br>
                 <button id="play" type="submit">Let's go!</button>
             </form>
+            <!--### Copyright, only visible once ###-->
             <div id="copyright">
                 <p>Copyright © Jim Olesen 2022</p>
             </div>

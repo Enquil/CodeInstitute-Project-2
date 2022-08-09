@@ -64,16 +64,29 @@ Wanted to do some json and store users and questions with MongoDB, this might st
 ## Accessibility
 ---
 
-Becuse im using JavaScript for basically all the HTML, i chose buttons instead of links because they acted very weird and declaring a href did not mix well with using JavaScript to generate the HTMl, this is most likely because im not experienced with how these interactions work.
+Becuse im using JavaScript for basically all the HTML, i chose buttons instead of links because they acted very weird and declaring a href did not mix well with using JavaScript to generate the HTML, this is most likely because im not experienced with how these interactions work.
 
 No Aria-labels, i started to put them in at first but, because of how they are supposed to be used, i chose against it, got a lot of complaints 
-
 
 
 ## Testing
 ---
 
 ### Lighthouse score
+
+### JSLint
+
+#### for (let button of buttons) {
+####        button.addEventListener("click", function() {
+####            let answer = this.innerHTML;
+####            check(answer);
+####    });
+#### att script.js 44 
+
+JSLint Online complains about it (Thanks to Anna Greaves at Code Institute btw i think this is great.)
+ESLint in vscode doesent complain, JSHint only says this is confusing syntax but i dont see the problem?
+Im keeping it, i think it's great and it's supermodular, plus i think if you redo the questions into some more math shorten the
+Javascript significantly.
 
 ### W3C validator result 
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fenquil.github.io%2FProject2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en

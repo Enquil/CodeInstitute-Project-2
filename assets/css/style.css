@@ -21,9 +21,9 @@ button, label, p {
 }
 
 button {
-    font-size: 2.5rem;
+    font-size: 4rem;
     padding: 1rem;
-    width: 35%;
+    width: 24%;
     border: 2px ridge #42BFDD;
     background-color: #0C1713;
     margin: 1rem;
@@ -45,12 +45,16 @@ h1, h2, h3 {
     font-family: 'Mouse Memoirs', sans-serif;
 }
 
-h1, h2 {
-    font-size: 4rem;
+h1 {
+    font-size: 18rem;
+}
+
+h2 {
+    font-size: 8rem;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 input {
@@ -58,11 +62,11 @@ input {
 }
 
 label {
-    font-size: 2.5rem;
+    font-size: 4.6rem;
 }
 
 p, input {
-    font-size: 1.5rem;
+    font-size: 2.9rem;
 }
 
 /*--- IDS ---*/
@@ -123,13 +127,47 @@ h1, h2, h3 {
   }
 
 @media only screen and (max-width: 1100px) and (min-width: 650px) {
+
+    button {
+        text-shadow: 2px 2px #42BFDD;
+        font-size: 6rem;
+        width: 75%;
+        height: 10%;
+    }¨
+
+    h1, h2, h3 {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 11rem;
+    }
+
+    h3 {
+        font-size: 7rem;
+    }
+
+    input {
+        font-size: 3.7rem;
+    }
+    
+    label {
+        font-size: 6rem;
+    }
+
+    p {
+        font-size: 3rem;
+    }
+
     #copyright {
         display: none;
     }
 
-    button {
-        width: 45%;
-        height: 10%;
+    /*Used to size the question font for mobile and give some space*/
+    
+    .mobilesize {
+        font-size: 8rem;
+        padding-bottom: 6rem;
     }
 }
 

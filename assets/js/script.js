@@ -117,7 +117,7 @@ function runGame() {
 
     sessionQuestions[0].wrong.sort(() => Math.random() - 0.5);
 
-    game.innerHTML = `<h2>${sessionQuestions[0].question}</h2>
+    game.innerHTML = `<h2 class="mobilesize">${sessionQuestions[0].question}</h2>
                         <div id="answerbox">
                             <button>${sessionQuestions[0].wrong[0]}</button> 
                             <button>${sessionQuestions[0].wrong[1]}</button> 
@@ -195,6 +195,7 @@ function endGame() {
     let percentage = sessionCorrect / (sessionGames * 3) * 100;
     let round = percentage.toFixed(1);
     game.innerHTML = `<h2>Statistics</h2>
+                        <p>${user}<p>
                       <h3>You have answered ${round}% of questions correct, this session!</h3>`;
 }
 

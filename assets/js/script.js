@@ -46,7 +46,7 @@ function newGame(user) {
             let category = this.innerHTML;
             select(category);
         });
-    }   
+    } 
 }
 
 /**

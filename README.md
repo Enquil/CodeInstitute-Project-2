@@ -113,3 +113,24 @@ https://validator.w3.org/nu/?doc=https%3A%2F%2Fenquil.github.io%2FProject2%2F
   * In the left navigation menu, select pages
   * Below branch, select branch to deploy from
   * Save, might not refresh automatically and could take a moment.
+
+
+## Credits
+---
+
+### Thanks to AnnaGreaves@CodeInstitute for the function mentioned in Testing
+### Thanks to AnthonyUgwu@CodeInstitute for a lot of good advice.
+### Thank you to MountianCharlie@github for the README.md structure. 
+
+## Site Expansion 
+---
+
+### Passwords, stored data and expanded statistics
+### More questions, aiming at 100 across 4 categories to start, restructure the objects.
+
+
+## Known Issues
+---
+
+### Hard Questions
+Does not exis at the moment.

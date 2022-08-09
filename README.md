@@ -112,4 +112,4 @@ https://validator.w3.org/nu/?doc=https%3A%2F%2Fenquil.github.io%2FProject2%2F
   * In the menu above project files, select settings
   * In the left navigation menu, select pages
   * Below branch, select branch to deploy from
-  * Save, might not refresh automatically and could take a while.
+  * Save, might not refresh automatically and could take a moment.

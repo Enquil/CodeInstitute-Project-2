@@ -95,7 +95,6 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fenquil.github.io
 
 ### W3C Official
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fenquil.github.io%2FProject2%2F
-1 Error, it complains about meta charset
 
 ### Lighthouse score
 All 100, performance 92-98.
@@ -128,6 +127,8 @@ Will implement a database for storing users and statistics
 ### More questions
 Aiming at 100 across 4 categories, will also restructure the question objects.
 
+### Aria-labels
+This should be implemented, figuring out how to restructure the site so that you can actually use screen-reader on the questions. 
 
 ## Known Issues
 ---

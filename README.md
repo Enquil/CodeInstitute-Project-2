@@ -142,4 +142,5 @@ Does not exist at the moment.
 ### Page breaking when viewing on github some times.
 
 Apparently this is tied to Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
+It looks good when just opening it locally and 
 I dont know much about this error and everything i've read says i should ignore it but does that mean it looks bad on deployment?

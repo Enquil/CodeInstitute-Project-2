@@ -89,6 +89,15 @@ p, input {
     display: block;
 }
 
+.fortyfive {
+    width: 45%;
+    height: 15%;
+}
+
+.inline {
+    display: inline;
+}
+
 .fifty {
     width: 50%;
 }

@@ -124,8 +124,11 @@ https://validator.w3.org/nu/?doc=https%3A%2F%2Fenquil.github.io%2FProject2%2F
 ## Site Expansion 
 ---
 
-### Passwords, stored data and expanded statistics
-### More questions, aiming at 100 across 4 categories to start, restructure the objects.
+### Passwords and stored data
+Will implement a database for storing users and statistics
+
+### More questions
+Aiming at 100 across 4 categories, will also restructure the question objects.
 
 
 ## Known Issues

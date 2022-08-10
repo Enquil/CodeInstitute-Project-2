@@ -94,6 +94,14 @@ p, input {
     height: 15%;
 }
 
+.inline {
+    display: inline;
+}
+
+.fifty {
+    width: 50%;
+}
+
 .green, .green:hover {
     background-color: #00FF00;
     color: #0C1713;

@@ -88,31 +88,30 @@ All 100, performance 92-98.
 ####    });
 #### att script.js 44 
 
-JSLint Online complains about it (Thanks to Anna Greaves at Code Institute btw i think this is great.)
-ESLint in vscode doesent complain, JSHint only says this is confusing syntax but is that really confusing? Is it?
-Im keeping it, i think it's great and it's supermodular, plus i think if you redo the questions into some more math and "switch-like behavior", you can shorten the
-Javascript significantly to sub 100 lines with basically this function only, im gonna test it later but im not sure how to use => that well.
+This is the one issue i get with the JavaScript.
+JSLint Online complains about it (Thanks to Anna Greaves at Code Institute btw, i think this is great.)
+ESLint in vscode doesent complain, JSHint only says this is confusing syntax but is that really confusing?
+
 
 ### Jigsaw validator result 
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fenquil.github.io%2FProject2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 
 ### W3C Official
-
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fenquil.github.io%2FProject2%2F
 
-1 Error, that should be fine?
+1 Error, it complains about meta charset
 
 
 ## Deployment
 ---
 
-#### Deploy on GitHub
+### Deploy on GitHub
 
-* When inside the project and viewing the project files
-  * In the menu above project files, select settings
-  * In the left navigation menu, select pages
-  * Below branch, select branch to deploy from
-  * Save, might not refresh automatically and could take a moment.
+  #### * When inside the project and viewing the project files
+  #### * In the menu above project files, select settings
+  #### * In the left navigation menu, select pages
+  #### * Below branch, select branch to deploy from
+  #### * Save, might not refresh automatically and could take a moment.
 
 
 ## Credits

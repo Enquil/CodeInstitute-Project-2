@@ -86,7 +86,7 @@ No Aria-labels, i started to put them in at first but, but because of how they a
 #### att script.js 44 
 
 This is the one issue i get with the JavaScript.
-JSLint Online complains about it (Thanks to Anna Greaves at Code Institute btw, i think this is great.)
+JSLint Online complains about it (Thanks to Anna Greaves at Code Institute, i think this is great.)
 ESLint in vscode doesent complain, JSHint only says this is confusing syntax but is that really confusing?
 
 

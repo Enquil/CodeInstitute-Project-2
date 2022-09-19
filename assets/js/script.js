@@ -10,7 +10,7 @@ let user = "";
 /**
  * Gets the username from the input,
  * Clears all text content,
- * Sens you straight into category choice
+ * Sends you straight into category choice
  */
 function handleSubmit() {
     event.preventDefault();
